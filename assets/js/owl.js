@@ -1,20 +1,4 @@
-/**
- * Owl Carousel v2.3.4
- * Copyright 2013-2018 David Deutsch
- * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
- */
-/**
- * Owl carousel
- * @version 2.3.4
- * @author Bartosz Wojciechowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- * @todo Lazy Load Icon
- * @todo prevent animationend bubling
- * @todo itemsScaleUp
- * @todo Test Zepto
- * @todo stagePadding calculate wrong active classes
- */
+
 ;(function($, window, document, undefined) {
 
 	/**
@@ -3446,3 +3430,80 @@
 	}
 
 })(window.Zepto || window.jQuery, window, document);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/ Wait for DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all filter buttons and category cards
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const categoryCards = document.querySelectorAll('.category-card');
+  const categoryGrid = document.querySelector('.category-grid');
+  
+  // Store total count for each category
+  const categoryCounts = {
+    all: categoryCards.length,
+    cannabis: document.querySelectorAll('[data-category="cannabis"]').length,
+    edibles: document.querySelectorAll('[data-category="edibles"]').length,
+    drinks: document.querySelectorAll('[data-category="drinks"]').length,
+    rizzlers: document.querySelectorAll('[data-category="rizzlers"]').length
+  };
+
+  // Add click event to each filter button
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      
+      // Add active class to clicked button
+      this.classList.add('active');
+      
+      // Get filter value
+      const filterValue = this.getAttribute('data-filter');
+      
+      // Add loading class for animation
+      categoryGrid.classList.add('loading');
+      
+      // Small delay for smooth animation
+      setTimeout(() => {
+        // Filter cards
+        let visibleCount = 0;
+        
+        categoryCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          
+          if (filterValue === 'all' || cardCategory === filterValue) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // Remove loading class
+        categoryGrid.classList.remove('loading');
+        
+        // Show "no results" message if no items found
+        showNoResultsMessage(visibleCount, filterValue);
+        
+        // Update URL hash without refreshing page
+        window.location.hash = filterValue;
+      }, 300);
+    });
+  });
