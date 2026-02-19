@@ -1,10 +1,3 @@
-/* 
-
-TemplateMo - Finance Business
-
-https://templatemo.com/tm-545-finance-business
-
-*/
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -1567,55 +1560,42 @@ footer .contact-form button.filled-button:hover {
 
 
 
-
 .featured {
   padding: 5rem 0;
-  background: #ffffff;
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .section-title {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  color: #ffffff;
+  text-align: center; /* Center the title */
+  position: relative;
+  padding-bottom: 1rem;
 }
 
-.product-filters {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
 
-.category-card {
-  background: #161616;
-  
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+/* Optional: Add an underline effect */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #4a4a4a, #ffffff, #4a4a4a);
+  border-radius: 2px;
 }
-
-.category-card:hover {
-  transform: translateY(-4px);
-}
-
-.category-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.category-card h4 {
-  padding: 1rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
 
 /* ================= CATEGORY FILTERS ================= */
 .category-filters {
@@ -1623,6 +1603,7 @@ footer .contact-form button.filled-button:hover {
   gap: 1rem;
   margin-bottom: 3rem;
   flex-wrap: wrap;
+  justify-content: center; /* Center filters by default */
 }
 
 .filter-btn {
@@ -1631,20 +1612,22 @@ footer .contact-form button.filled-button:hover {
   color: #ffffff;
   border: 1.5px solid #2a2a2a;
   border-radius: 30px;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  white-space: nowrap; /* Prevent text wrapping inside buttons */
 }
+
 
 .filter-btn:hover {
   background: #2a2a2a;
   border-color: #3a3a3a;
   transform: translateY(-2px);
 }
+
 
 .filter-btn.active {
   background: #ffffff;
@@ -1658,7 +1641,12 @@ footer .contact-form button.filled-button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.category-grid.loading {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .category-card {
@@ -1668,7 +1656,7 @@ footer .contact-form button.filled-button:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid #2a2a2a;
-  display: block;
+  animation: fadeIn 0.5s ease forwards;
 }
 
 .category-card:hover {
@@ -1689,15 +1677,56 @@ footer .contact-form button.filled-button:hover {
   transform: scale(1.05);
 }
 
-.category-card h4 {
-  padding: 1.25rem 1rem;
+.category-card h3 {
+  padding: 1rem 1rem 0.25rem;
   font-size: 1.1rem;
   font-weight: 600;
   color: #ffffff;
   margin: 0;
   text-align: center;
+}
+
+.category-card h4 {
+  padding: 0 1rem 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4caf50;
+  margin: 0;
+  text-align: center;
   background: #1a1a1a;
   border-top: 1px solid #2a2a2a;
+}
+
+/* ================= NO RESULTS MESSAGE ================= */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #161616;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.no-results p {
+  margin-bottom: 1rem;
+}
+
+.no-results .reset-filters {
+  background: transparent;
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.no-results .reset-filters:hover {
+  background: #ffffff;
+  color: #0f0f0f;
 }
 
 /* ================= ANIMATIONS ================= */
@@ -1712,9 +1741,157 @@ footer .contact-form button.filled-button:hover {
   }
 }
 
-.category-card {
-  animation: fadeIn 0.5s ease forwards;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+	 .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-title::after {
+    width: 60px;
+    height: 2px;
+  }
+  
+  .category-filters {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  
+  .filter-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.8rem;
+    flex: 0 1 auto; /* Allow buttons to shrink */
+  }
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .category-card img {
+    height: 200px;
+  }
+  
 }
+
+
+@media screen and (max-width: 576px) {
+   .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .section-title::after {
+    width: 50px;
+  }
+  
+  .category-filters {
+    gap: 0.5rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.75rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Custom scrollbar styling */
+  .category-filters::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .category-filters::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+  }
+  
+  .category-filters::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+    border-radius: 10px;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
+
+
+/* Small Mobile: 375px and below */
+@media screen and (max-width: 375px) {
+   .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .section-title::after {
+    width: 40px;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.7rem;
+    border-width: 1px;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .category-filters {
+    display: none;
+  }
+  
+  .category-filters-select {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 2rem auto; /* Center the dropdown */
+    padding: 0.75rem;
+    background: #161616;
+    color: #ffffff;
+    border: 1.5px solid #2a2a2a;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .category-filters-select option {
+    background: #161616;
+    color: #ffffff;
+  }
+}
+
+/* Optional: If you want horizontal scroll on larger screens too */
+@media screen and (max-width: 480px) {
+  .category-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Hide scrollbar by default, show on hover/scroll */
+  .category-filters {
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .category-filters::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .category-filters:hover::-webkit-scrollbar,
+  .category-filters:active::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+  }
+}
+
+
 
 
 
