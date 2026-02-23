@@ -39,14 +39,14 @@
         <div class="row">
           <div class="col-md-8 col-xs-12">
             <ul class="left-info">
-              <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 09:00-17:00</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>090-080-0760</a></li>
+              <li><a href="#"><i class="fa fa-clock-o"></i>Mon - Sun  10:00 am - 22:00 pm</a></li>
+              <li><a href="#"><i class="fa fa-phone"></i>071 749 0903</a></li>
             </ul>
           </div>
           <div class="col-md-4">
             <ul class="right-icons">
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-tiktok"></i></a></li>
               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
               <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
             </ul>
@@ -90,7 +90,7 @@
         <div class="row">
           <div class="col-md-12">
             <h1>About Us</h1>
-            <span>We have over 20 years of experience</span>
+            <span>We have over 7 years of experience</span>
           </div>
         </div>
       </div>
@@ -106,8 +106,11 @@
                   <div class="right-content">
                     <span>ROOTS RUN DEEP · ITAL IS VITAL</span>
 <h2>Get to know about <em>JAH HERBS</em></h2>
-<p>I-n-I cultivate pure, sun‑grown herbs the Rastafari way – no chemicals, no greed, only natural healing handed down from the elders of Zion. Every leaf is blessed by the sun and rain of the hills. 
-<br><br>We honor the sacred herb as a gift for meditation, grounding, and wellness. Join the family and feel the power of nature’s medicine.</p>
+<p>
+JAH HERBS is built on a commitment to natural living, purity, and mindful wellness. Our carefully selected herbal products are crafted without synthetic additives — just clean, plant-based goodness designed to support balance and clarity. 
+<br><br>
+We respect the power of herbs as a timeless gift for relaxation, focus, and overall well-being. Become part of a community that values authenticity, harmony, and the strength of nature.
+</p>
 <a href="" class="filled-button">JAH LOVE</a>
                   </div>
                 </div>
@@ -128,7 +131,7 @@
 
     <style>
 
-      .process-section {
+    .process-section {
   padding: 100px 0;
   background: #fff;
 }
@@ -155,6 +158,38 @@
   color: #fff;
   margin-bottom: 20px;
 }
+
+/* ========== Tablet (≤ 992px) ========== */
+@media (max-width: 992px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .process-section {
+    padding: 80px 20px;
+  }
+}
+
+/* ========== Mobile (≤ 600px) ========== */
+@media (max-width: 600px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .process-section {
+    padding: 60px 20px;
+  }
+
+  .process-item {
+    text-align: center;
+  }
+
+  .icon-circle {
+    margin: 0 auto 20px auto;
+  }
+}
     </style>
 
 
@@ -164,20 +199,20 @@
 
       <div class="process-item">
         <div class="icon-circle">🌿</div>
-        <h4>Absorption</h4>
-        <p>Nausea is an unpleasant, diffuse sensation of unease and discomfort.</p>
+        <h4>Selection</h4>
+        <p>We carefully source high-quality herbal ingredients chosen for their natural purity and traditional wellness value.</p>
       </div>
 
       <div class="process-item">
         <div class="icon-circle">💊</div>
-        <h4>Distribution</h4>
-        <p>Nausea is an unpleasant, diffuse sensation of unease and discomfort.</p>
+        <h4>Preparation</h4>
+        <p>Each product is thoughtfully prepared to preserve its natural properties and maintain consistent quality.</p>
       </div>
 
       <div class="process-item">
         <div class="icon-circle">⚙️</div>
-        <h4>Metabolism</h4>
-        <p>Nausea is an unpleasant, diffuse sensation of unease and discomfort.</p>
+        <h4>Quality Care</h4>
+        <p>Every batch undergoes careful handling and attention to ensure a clean, balanced, and reliable herbal experience.</p>
       </div>
 
     </div>
@@ -187,20 +222,20 @@
 
 
     <style>
-      .expertise-section {
+  .expertise-section {
   background: #f5f5f5;
-  padding: 100px 0;
+  padding: 140px 0; /* increased from 100px */
 }
 
 .expertise-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px; /* increased spacing between columns */
   align-items: center;
 }
 
 .skill {
-  margin-bottom: 30px;
+  margin-bottom: 45px; /* more spacing between progress bars */
 }
 
 .skill-header {
@@ -208,31 +243,84 @@
   justify-content: space-between;
   font-size: 13px;
   letter-spacing: 1px;
-  margin-bottom: 8px;
+  margin-bottom: 12px; /* slightly more space above bar */
   font-weight: 600;
 }
 
 .progress {
-  height: 6px;
+  height: 8px; /* slightly thicker bar */
   background: #ddd;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
 .progress-bar {
   height: 100%;
-  background: #6aa84f;
+  background: #00bd00;
   transition: width 1s ease;
 }
 
 .expertise-content h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
+  font-size: 40px; /* slightly larger */
+  margin-bottom: 20px;
 }
 
 .expertise-content h4 {
-  color: #6aa84f;
+  color: #00bd00;
+  margin-bottom: 25px;
+}
+
+.expertise-content p {
   margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+
+/* ========== Tablet (≤ 992px) ========== */
+@media (max-width: 992px) {
+  .expertise-section {
+    padding: 100px 20px;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .expertise-content h2 {
+    font-size: 34px;
+  }
+}
+
+/* ========== Mobile (≤ 600px) ========== */
+@media (max-width: 600px) {
+  .expertise-section {
+    padding: 80px 20px;
+  }
+
+  .expertise-grid {
+    gap: 40px;
+  }
+
+  .expertise-content {
+    text-align: center;
+  }
+
+  .skill-header {
+    font-size: 12px;
+  }
+
+  .progress {
+    height: 6px;
+  }
+
+  .expertise-content h2 {
+    font-size: 28px;
+  }
+
+  .expertise-content h4 {
+    font-size: 16px;
+  }
 }
 
 </style>
@@ -255,7 +343,7 @@
 
         <div class="skill">
           <div class="skill-header">
-            <span>PATIENT SATISFACTION</span>
+            <span>CLIENT SATISFACTION</span>
             <span>90%</span>
           </div>
           <div class="progress">
@@ -265,7 +353,7 @@
 
         <div class="skill">
           <div class="skill-header">
-            <span>DOCTOR RATING</span>
+            <span>QUALITY CONSISTENCY</span>
             <span>80%</span>
           </div>
           <div class="progress">
@@ -275,7 +363,7 @@
 
         <div class="skill">
           <div class="skill-header">
-            <span>PRESS REVIEW</span>
+            <span>COMMUNITY TRUST</span>
             <span>80%</span>
           </div>
           <div class="progress">
@@ -286,12 +374,14 @@
 
       <!-- Right Content -->
       <div class="expertise-content">
-        <h2>Our Expertises</h2>
-        <h4>Medical cannabis can be administered</h4>
+        <h2>Our Expertise</h2>
+        <h4>Natural wellness delivered with consistency</h4>
         <p>
-          Medical cannabis can be administered through various methods,
-          including capsules, lozenges, tinctures, dermal patches,
-          oral or dermal sprays, cannabis edibles, and vaporizing.
+          We focus on providing carefully curated herbal products designed to support balance, relaxation, and overall well-being. Every formulation is prepared with attention to purity and quality standards.
+        </p>
+
+        <p>
+          Our commitment goes beyond products we aim to build trust through transparency, responsible sourcing, and a dedication to delivering a reliable herbal experience for our community.
         </p>
       </div>
 
@@ -302,12 +392,11 @@
 
 
 
-
 <style>
   .testimonials {
   padding: 120px 0;
-  background: linear-gradient(rgba(110,130,110,0.9), rgba(110,130,110,0.9)),
-              url('assets/images/leaf-bg.jpg');
+  background: 
+              url('assets/images/tim-foster-A-rAZGIE2pA-unsplash.jpg');
   background-size: cover;
   color: #fff;
 }
@@ -354,53 +443,110 @@
   margin-right: 15px;
 }
 
+/* ========== Tablet (≤ 992px) ========== */
+@media (max-width: 992px) {
+  .testimonials {
+    padding: 100px 20px;
+    background-position: center;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+/* ========== Mobile (≤ 600px) ========== */
+@media (max-width: 600px) {
+  .testimonials {
+    padding: 80px 20px;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 30px;
+  }
+
+  .section-title span {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .author {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .author img {
+    margin-bottom: 10px;
+  }
+}
+
 </style>
 
   
-    <section class="testimonials">
+   <section class="testimonials">
   <div class="container">
     <div class="section-title">
-      <span>TESTIMONIALS</span>
-      <h2>Customer’s Love</h2>
+      <span>CLIENT FEEDBACK</span>
+      <h2>What Our Community Says</h2>
     </div>
 
     <div class="testimonial-grid">
 
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <h4>Impressive</h4>
-        <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <h4>Outstanding Quality</h4>
+        <p>
+          The consistency and purity of the products truly stand out. I’ve noticed a real difference in my daily wellness routine.
+        </p>
         <div class="author">
-          <img src="assets/images/person1.jpg" alt="">
+          <img src="assets/images/team-3.jpg" alt="">
           <div>
             <strong>Emily Johnson</strong>
-            <span>Fashion Enthusiast</span>
+            <span>Wellness Advocate</span>
           </div>
         </div>
       </div>
 
       <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <h4>Try It Now!</h4>
-        <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="stars">★★★★</div>
+        <h4>Highly Recommended</h4>
+        <p>
+          Reliable, clean, and thoughtfully prepared. The attention to quality gives me confidence every time I purchase.
+        </p>
         <div class="author">
-          <img src="assets/images/person2.jpg" alt="">
+          <img src="assets/images/team-4.jpg" alt="">
           <div>
             <strong>David Smith</strong>
-            <span>Trendsetter</span>
+            <span>Health & Lifestyle Enthusiast</span>
           </div>
         </div>
       </div>
 
       <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <h4>Life-Changing!</h4>
-        <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="stars">★★★★</div>
+        <h4>Trusted Brand</h4>
+        <p>
+          I appreciate the transparency and care behind every product. It feels good supporting a brand that values natural balance.
+        </p>
         <div class="author">
-          <img src="assets/images/person3.jpg" alt="">
+          <img src="assets/images/team-2.jpg" alt="">
           <div>
             <strong>Michael Roberts</strong>
-            <span>Style Icon</span>
+            <span>Long-Term Customer</span>
           </div>
         </div>
       </div>
@@ -408,7 +554,6 @@
     </div>
   </div>
 </section>
-
 <style>
 /* ===== Maze Gallery ===== */
 
