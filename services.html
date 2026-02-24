@@ -697,45 +697,189 @@
   </div>
 </section>
 
-<section class="featured">
+
+
+
+<style>
+  /* ================= JAH HERBS FAQ SECTION ================= */
+
+.faq {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+  color: #fff;
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3.5rem;
+  color: #00bd00;
+  letter-spacing: 1px;
+}
+
+/* FAQ Card */
+.faq-item {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #00bd00;
+}
+
+/* Question Button */
+.faq-question {
+  width: 100%;
+  padding: 1.3rem 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Icon */
+.icon {
+  font-size: 1.3rem;
+  color: #00bd00;
+  transition: 0.3s ease;
+}
+
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #111;
+  padding: 0 1.5rem;
+}
+
+.faq-answer p {
+  padding: 1rem 0 1.5rem;
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Active State */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.active .icon {
+  transform: rotate(45deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.7rem;
+  }
+
+  .faq-question {
+    font-size: 0.9rem;
+  }
+}
+</style>
+
+<section class="faq">
   <div class="container">
-    <h3 class="section-title">Frequently Asked Questions</h3>
+    <h2 class="faq-title">Frequently Asked Questions</h2>
 
-    <div class="faq">
-      <div class="faq-item">
-        <button class="faq-question"> What is JAH HERBS?</button>
-        <div class="faq-answer">
-          <p>JAH HERBS is a premium cannabis brand focused on quality, transparency, and responsible use.</p>
-        </div>
+     <div class="faq-item">
+      <button class="faq-question">
+        What is JAH HERBS? 
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>JAH HERBS is a premium cannabis brand focused on quality, transparency, and responsible use.</p>
       </div>
-
-      <div class="faq-item">
-        <button class="faq-question"> Are your products lab tested?</button>
-        <div class="faq-answer">
-          <p>Yes! Every batch undergoes thorough lab testing for potency, safety, and consistency.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question"> Is it legal to purchase?</button>
-        <div class="faq-answer">
-          <p>All products are offered according to local laws and regulations. You must be 18+ to access them.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">How should I store my products?</button>
-        <div class="faq-answer">
-          <p>Keep in a cool, dry place away from direct sunlight and out of reach of minors.</p>
-        </div>
-      </div>
-
     </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Are JAH HERBS products 100% natural?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes. All our herbs are naturally sourced and carefully selected to maintain purity and quality.</p>
+      </div>
+    </div>
+
+  <div class="faq-item">
+  <button class="faq-question">
+    Do you offer nationwide delivery?
+    <span class="icon">+</span>
+  </button>
+  <div class="faq-answer">
+    <p>We are not offering nationwide delivery at the moment. Please contact us directly for local availability and collection options.</p>
+  </div>
+</div>
+
+   
+
+ <div class="faq-item">
+  <button class="faq-question">
+    Are you only based in Johannesburg?
+    <span class="icon">+</span>
+  </button>
+  <div class="faq-answer">
+    <p>Yes, we are currently based in Johannesburg. Reach out to us and we’ll guide you on how to get your herbs safely and conveniently.</p>
+  </div>
+</div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Can I get advice before purchasing?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Absolutely. Contact us for guidance on choosing the right herbal product for your needs.</p>
+      </div>
+    </div>
+
+   <div class="faq-item">
+  <button class="faq-question">
+    How can I place an order?
+    <span class="icon">+</span>
+  </button>
+  <div class="faq-answer">
+    <p>You can place your order by contacting us directly. We will confirm availability and guide you through the process.</p>
+  </div>
+</div>
   </div>
 </section>
 
 
 
+
+
+  <div class="request-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h4>Seek the help of Zion</h4>
+             <span>Let I-n-I guide you to pure, natural herbs and sacred remedies. Rasta love for all.</span>
+          </div>
+          <div class="col-md-4">
+            <a href="contact.html" class="border-button">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <!-- Footer Starts Here -->
     <footer>
@@ -979,6 +1123,21 @@ document.addEventListener("DOMContentLoaded", function () {
   startAutoSlide();
 
 });
+</script>
+
+
+<script>
+  
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+
 </script>
  </body>
 </html>
