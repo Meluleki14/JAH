@@ -696,7 +696,6 @@ ul.slick-dots {
 
 
 
-
 /* Call Back Style */
 
 .callback-services {
@@ -1497,193 +1496,94 @@ footer .contact-form button.filled-button:hover {
 
 
 
+/* ================= FEATURED SECTION ================= */
+
+/* Main featured section wrapper */
 .featured {
-  padding: 5rem 0;
-  background: #ffffff;
+  padding: 5rem 0;              /* Adds vertical spacing (top & bottom) */
+  background: #ffffff;          /* Sets background color to white */
 }
 
+/* Title styling for the section */
 .section-title {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
+  text-align: center;           /* Centers the text horizontally */
+  font-size: 2rem;              /* Makes the font larger */
+  font-weight: 600;             /* Semi-bold text */
+  margin-bottom: 2.5rem;        /* Space below the title */
+  color: #222;                  /* Dark gray text color */
 }
 
-.product-filters {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
+/* ================= FILTER BUTTONS ================= */
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-
-.category-card {
-  background: #161616;
-  
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.category-card:hover {
-  transform: translateY(-4px);
-}
-
-.category-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.category-card h4 {
-  padding: 1rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-
-/* ================= CATEGORY FILTERS ================= */
+/* Container that holds all filter buttons */
 .category-filters {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
+  display: flex;                /* Uses flexbox layout */
+  justify-content: center;      /* Centers buttons horizontally */
+  gap: 1rem;                    /* Space between buttons */
+  flex-wrap: wrap;              /* Allows buttons to wrap on smaller screens */
+  margin-bottom: 3rem;          /* Space below filters */
 }
 
+/* Individual filter button styling */
 .filter-btn {
-  padding: 0.75rem 1.75rem;
-  background: transparent;
-  color: #ffffff;
-  border: 1.5px solid #2a2a2a;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  font-size: 0.85rem;
+  padding: 0.6rem 1.4rem;       /* Inner spacing (top/bottom & left/right) */
+  background: transparent;      /* No background color */
+  border: 1px solid #ddd;       /* Light gray border */
+  border-radius: 4px;           /* Slightly rounded corners */
+  font-size: 0.85rem;           /* Smaller font size */
+  cursor: pointer;              /* Shows pointer cursor on hover */
+  transition: 0.2s ease;        /* Smooth hover animation */
 }
 
-.filter-btn:hover {
-  background: #2a2a2a;
-  border-color: #3a3a3a;
-  transform: translateY(-2px);
-}
-
+/* Hover effect and active button state */
+.filter-btn:hover,
 .filter-btn.active {
-  background: #ffffff;
-  color: #0f0f0f;
-  border-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  background: #00bd00;          /* Green background */
+  color: #fff;                  /* White text */
+  border-color: #00bd00;        /* Green border */
 }
 
-/* ================= CATEGORY GRID ================= */
+/* ================= PRODUCT GRID ================= */
+
+/* Grid layout for product/category cards */
 .category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  transition: all 0.3s ease;
+  display: grid;                                        /* Uses CSS grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Responsive columns */
+  gap: 2rem;                                            /* Space between cards */
 }
 
+/* ================= PRODUCT CARD ================= */
+
+/* Individual product/category card */
 .category-card {
-  background: #161616;
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid #2a2a2a;
-  display: block;
+  border: 2px solid #00bd00;       /* Light gray border */
+  padding: 1rem;                /* Inner spacing */
+  text-align: center;           /* Centers content inside card */
+  transition: 0.2s ease;        /* Smooth hover transition */
 }
 
+/* Card hover effect */
 .category-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
-  border-color: #404040;
+  border-color: #00bd00;        /* Border turns green on hover */
 }
 
+/* Product image inside card */
 .category-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
+  width: 100%;                  /* Image fills card width */
+  height: 200px;                /* Fixed image height */
+  object-fit: cover;            /* Crops image properly */
+  margin-bottom: 1rem;          /* Space below image */
 }
 
-.category-card:hover img {
-  transform: scale(1.05);
-}
-
+/* Green headings inside card */
+.category-card h3,
 .category-card h4 {
-  padding: 1.25rem 1rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0;
-  text-align: center;
-  background: #1a1a1a;
-  border-top: 1px solid #2a2a2a;
-}
-
-/* ================= ANIMATIONS ================= */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.category-card {
-  animation: fadeIn 0.5s ease forwards;
+  color: #00bd00;               /* Green text color */
+  margin: 0.3rem 0;             /* Small spacing above & below */
 }
 
 
 
-
-
-      /* ================= FAQ STYLES ================= */
-.faq-item {
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  background-color: #ffffff;
-  color: #ff0000;
-  overflow: hidden;
-}
-
-.faq-question {
-  width: 100%;
-  text-align: left;
-  background: #00bd00;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.faq-question:hover {
-  background: #27ae60;
-}
-
-.faq-answer {
-  max-height: 0;
-  padding: 0 1rem;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-}
-
-.faq-answer p {
-  margin: 1rem 0;
-}
 
 
 
@@ -1824,44 +1724,6 @@ footer .contact-form button.filled-button:hover {
 
 
 
-
-
-
-
-/* ===============================
-   CREATIVE CATEGORY BLOCKS
-================================ */
-
-.category-section {
-  background: #101515;
-  padding: 100px 0;
-}
-
-.category-section .service-item {
-  background: #141919;
-  border-radius: 20px;
-  padding: 60px 30px;
-  transition: 0.4s ease;
-  border: 1px solid rgba(255,255,255,0.05);
-}
-
-.category-section .service-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(154,205,50,0.3);
-  border-color: #9acd32;
-}
-
-.category-section h4 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #9acd32;
-  margin-bottom: 15px;
-}
-
-.category-section p {
-  color: #bbb;
-  margin-bottom: 20px;
-}
 
 
 
