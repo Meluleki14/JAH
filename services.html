@@ -468,7 +468,7 @@
         <span class="stamp">🥤 New</span>
         <h2 class="secondary-title">Sodaze<br><span class="soft">Sparkling Drink</span></h2>
         <p class="desc">10mg THC • Zero sugar • Citrus</p>
-        <div class="amount">R112</div>
+        <div class="amount">R60</div>
     
       </div>
      
@@ -500,204 +500,675 @@
     </div>
   </section>
 
-<section class="featured">
+
+
+  
+
+ <section class="products-section">
   <div class="container">
-    <h3 class="section-title">Browse Categories</h3>
-    
-    <div class="category-filters">
-      <button class="filter-btn active" data-filter="all">All Products</button>
-      <button class="filter-btn" data-filter="cannabis">Cannabis</button>
-      <button class="filter-btn" data-filter="edibles">Edibles</button>
-      <button class="filter-btn" data-filter="drinks">Drinks</button>
-      <button class="filter-btn" data-filter="rizzlers">Rizzlers</button>
+    <h2 class="section-title">Our Products</h2>
+
+    <div class="filter-buttons">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('cannabis')">Cannabis</button>
+      <button onclick="filterProducts('edible')">Edibles</button>
+      <button onclick="filterProducts('gummies')">Gummies</button>
+      <button onclick="filterProducts('drink')">Drinks</button>
+      <button onclick="filterProducts('other')">Other</button>
     </div>
+
+    <div class="products-grid" id="products-grid">
+                <!-- Flower / Gummies -->
+                <div class="product-card gummies">
+                    <img src="assets/images/sodaze gums.jfif" alt="Sodaze Gummies">
+                  
+                    <h3>Sodaze Gummies</h3>
+                    <p class="info">THC: 22% • Hybrid</p>
+                    <p class="price">R35</p>
+                </div>
+
+                <!-- Joint / Cannabis -->
+                <div class="product-card cannabis">
+                    <img src="assets/images/32.jpg" alt="TOTS INDICA">
+                    
+                    <h3>TOTS INDICA</h3>
+                    <p class="info">THC: 18%</p>
+                    <p class="price">R12</p>
+                </div>
+
+                <!-- Gummies -->
+                <div class="product-card gummies">
+                    <img src="assets/images/Apricot Gummies.jfif" alt="Apricot Gummies">
+                   
+                    <h3>Apricot Gummies</h3>
+                    <p class="info">THC: 18%</p>
+                    <p class="price">R84</p>
+                </div>
+
+                <!-- Edibles -->
+                <div class="product-card edible">
+                    <img src="assets/images/choc chip cookies.jfif" alt="Choc Chip Cookies">
+                    
+                    <h3>Choc Chip Cookies</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R90</p>
+                </div>
+
+                <!-- Edibles -->
+                <div class="product-card edible">
+                    <img src="assets/images/sodaze fudges.jfif" alt="Sodaze Fudges">
+                   
+                    <h3>Sodaze Fudges</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R80</p>
+                </div>
+
+                <!-- Edibles -->
+                <div class="product-card edible">
+                    <img src="assets/images/Ding Fudges.jfif" alt="Ding Fudges">
+                   
+                    <h3>Ding Fudges</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R80</p>
+                </div>
+
+                <!-- Gummies -->
+                <div class="product-card gummies">
+                    <img src="assets/images/sour rings.jfif" alt="Sour Rings">
+                   
+                    <h3>Sour Rings</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R70</p>
+                </div>
+
+                <!-- Gummies -->
+                <div class="product-card gummies">
+                    <img src="assets/images/Ding Edibles Sour Worms.jfif" alt="Ding Edibles Sour Worms">
+                   
+                    <h3>Ding Edibles Sour Worms</h3>
+                    <p class="info">200mg Sativa and Indica</p>
+                    <p class="price">R148</p>
+                </div>
+
+                <!-- Gummies -->
+                <div class="product-card gummies">
+                    <img src="assets/images/Best Friends.jfif" alt="Best Friends">
+                  
+                    <h3>Best Friends</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R84</p>
+                </div>
+
+                <!-- Cannabis -->
+                <div class="product-card cannabis">
+                    <img src="assets/images/28.jpg" alt="OG Kush">
+          
+                    <h3>OG Kush</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R80</p>
+                </div>
+
+                <!-- Cannabis -->
+                <div class="product-card cannabis">
+                    <img src="assets/images/34.jpg" alt="Runts">
+              
+                    <h3>Runts</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R50</p>
+                </div>
+
+                <!-- Cannabis -->
+                <div class="product-card cannabis">
+                    <img src="assets/images/39.jpg" alt="Vanilla Gorilla">
+                
+                    <h3>Vanilla Gorilla</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R80</p>
+                </div>
+
+                <!-- Cannabis -->
+                <div class="product-card cannabis">
+                    <img src="assets/images/29.jpg" alt="Mendlinn">
+                
+                    <h3>Mendlinn</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R80</p>
+                </div>
+
+                <!-- Cannabis -->
+                <div class="product-card cannabis">
+                    <img src="assets/images/avery-meeker-muuZhItgQoE-unsplash.jpg" alt="Blunicorn Tunnel Hybrid">
+                  
+                    <h3>Blunicorn Tunnel Hybrid</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R50</p>
+                </div>
+
+                <!-- Gummies -->
+                <div class="product-card gummies">
+                    <img src="assets/images/pharma-hemp-complex-q_vnJenyn9s-unsplash.jpg" alt="Gummie Bears">
+                  
+                    <h3>Gummie Bears</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R84</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/greengo.jfif" alt="Greengo Rizzlers">
+                  
+                    <h3>Greengo Rizzlers</h3>
+                    <p class="info">10mg Sativa</p>
+                    <p class="price">R10</p>
+                </div>
+
+                <!-- Drinks -->
+                <div class="product-card drink">
+                    <img src="assets/images/Sodaze Drink.jfif" alt="Sodaze Drink">
+                
+                    <h3>Sodaze Drink</h3>
+                    <p class="info">30mg</p>
+                    <p class="price">R60</p>
+                </div>
+
+                <!-- Drinks -->
+                <div class="product-card drink">
+                    <img src="assets/images/31.jpg" alt="Lucky Club Juice">
+                 
+                    <h3>Lucky Club Juice</h3>
+                    <p class="info">30mg</p>
+                    <p class="price">R70</p>
+                </div>
+
+                <!-- Gummies -->
+                <div class="product-card gummies">
+                    <img src="assets/images/Bottled Happiness.jfif" alt="Bottled Happiness">
+              
+                    <h3>Bottled Happiness</h3>
+                    <p class="info">30mg</p>
+                    <p class="price">R44</p>
+                </div>
+
+                <!-- Drinks -->
+                <div class="product-card drink">
+                    <img src="assets/images/blueberry.jpeg" alt="Lucky Club Blueberry Vanilla">
+                  
+                    <h3>Lucky Club Blueberry Vanilla</h3>
+                    <p class="info">30mg</p>
+                    <p class="price">R44</p>
+                </div>
+
+                <!-- Drinks -->
+                <div class="product-card drink">
+                    <img src="assets/images/purple.jpeg" alt="Sodaze CBD Blueberry Juice">
+                  
+                    <h3>Sodaze CBD Blueberry Juice</h3>
+                    <p class="info">20mg</p>
+                    <p class="price">R35</p>
+                </div>
+
+                <!-- Drinks -->
+                <div class="product-card drink">
+                    <img src="assets/images/red.jpeg" alt="Sodaze CBD Cherry Juice">
+                
+                    <h3>Sodaze CBD Cherry Juice</h3>
+                    <p class="info">20mg</p>
+                    <p class="price">R35</p>
+                </div>
+
+                <!-- Drinks -->
+                <div class="product-card drink">
+                    <img src="assets/images/apricot.jpeg" alt="Lucky Club Apricot & Peach Juice">
+                
+                    <h3>Lucky Club Apricot & Peach Juice</h3>
+                    <p class="info">20mg</p>
+                    <p class="price">R60</p>
+                </div>
+
+                <!-- Drinks -->
+                <div class="product-card drink">
+                    <img src="assets/images/mango.jpeg" alt="Lucky Club Mango Juice">
+                 
+                    <h3>Lucky Club Mango Juice</h3>
+                    <p class="info">20mg</p>
+                    <p class="price">R60</p>
+                </div>
+
+                <!-- Gummies -->
+                <div class="product-card gummies">
+                    <img src="assets/images/mango.jpeg" alt="Glorious Joubs Sativa and Indica">
+                  
+                    <h3>Glorious Joubs Sativa and Indica</h3>
+                    <p class="info">100mg</p>
+                    <p class="price">R84</p>
+                </div>
+
+                <!-- Other / Accessories -->
+                <div class="product-card other">
+                    <img src="assets/images/shoe grinder.jpeg" alt="Gold Shoe Grinder">
+                  
+                    <h3>Gold Shoe Grinder</h3>
+                    <p class="info">Grinder</p>
+                    <p class="price">R140</p>
+                </div>
+
+                <!-- Edibles -->
+                <div class="product-card edible">
+                    <img src="assets/images/sodaze lollipops.jfif" alt="Sodaze Lollipops">
+                   
+                    <h3>Sodaze Lollipops</h3>
+                    <p class="info">100mg</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/OCB.jfif" alt="OCB Organic Hemp Wraps">
+                    
+                    <h3>OCB Organic Hemp Wraps</h3>
+                    <p class="info">Hemp Wraps</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/ohis.jpeg" alt="OHIS Hemp Wraps">
+                    
+                    <h3>OHIS Hemp Wraps</h3>
+                    <p class="info">Hemp Wraps</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/honey.jpg" alt="Honey">
+                  
+                    <h3>Honey</h3>
+                    <p class="info">CBD Infused</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/hoo.jpg" alt="Moti Tube Citric Berries">
+                    
+                    <h3>Moti Tube Citric Berries</h3>
+                    <p class="info">Vape</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Gummies -->
+                <div class="product-card gummies">
+                    <img src="assets/images/luckyclubgummies.jpg" alt="Lucky Club gummies Peach">
+                   
+                    <h3>Lucky Club Gummies Peach</h3>
+                    <p class="info">100mg</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/Chuff.jpg" alt="NASTY">
+                   
+                    <h3>NASTY</h3>
+                    <p class="info">Vape</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/grind.jpeg" alt="Silver Grinder">
+                    
+                    <h3>Silver Grinder</h3>
+                    <p class="info">Grinder</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/joint.jpg" alt="Pre rolled joint and Tube">
+                    
+                    <h3>Pre rolled joint and Tube</h3>
+                    <p class="info">Pre-roll</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/grend.jpeg" alt="Grinder">
+                   
+                    <h3>Grinder</h3>
+                    <p class="info">Grinder</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/oil.jpeg" alt="Sleep Therapy CBD Oil">
+                    
+                    <h3>Sleep Therapy CBD Oil</h3>
+                    <p class="info">CBD Oil</p>
+                    <p class="price">R89</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<style>
+/* Main products section container */
+.products-section {
+  padding: 80px 8%;           /* Top/bottom padding 80px, left/right padding 8% of viewport */
+  text-align: center;          /* Centers all text content inside this section */
+}
+
+/* Main title styling */
+.section-title {
+  font-size: 2.5rem;           /* Sets title size to 2.5 times the root font size */
+  margin-bottom: 30px;         /* Adds 30px space below the title */
+  background: #00bd00;  /* Creates green gradient from left to right */
+  -webkit-background-clip: text;  /* Clips background to text only (Webkit browsers) */
+  -webkit-text-fill-color: transparent;  /* Makes text transparent to show gradient (Webkit browsers) */
+}
+
+/* Container for filter buttons */
+.filter-buttons {
+  margin-bottom: 40px;         /* Adds 40px space below the button container */
+}
+
+/* Individual filter button styling */
+.filter-buttons button {
+  margin: 5px;                 /* Adds 5px space around each button */
+  padding: 8px 18px;           /* 8px top/bottom, 18px left/right padding inside buttons */
+  border: none;                /* Removes default button border */
+  border-radius: 0px;         /* Makes buttons rounded with 20px corner radius */
+  background: #00bd00;         /* Sets background color to green */
+  color: black;                /* Sets text color to black */
+  font-weight: 600;           /* Makes button text bold */
+  cursor: pointer;             /* Changes cursor to pointer on hover */
+  transition: 0.3s;            /* Smooth transition for hover effects over 0.3 seconds */
+}
+
+/* Hover state for filter buttons */
+.filter-buttons button:hover {
+  background: #00ff99;         /* Changes background to lighter green on hover */
+}
+
+/* Products grid container */
+.products-grid {
+  display: grid;               /* Enables CSS Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Creates responsive columns: minimum 250px, maximum 1 fraction of available space */
+  gap: 30px;                   /* Adds 30px space between grid items */
+}
+
+/* Individual product card */
+.product-card {
+  background: #00bd00;         /* Sets dark gray background color */
+  border-radius: 0px;         /* Rounds the corners by 20px */
+  overflow: hidden;            /* Hides any content that overflows the rounded corners */
+  padding-bottom: 10px;        /* Adds 20px padding at the bottom inside the card */
+  transition: 0.4s ease;       /* Smooth transition for hover effects over 0.4 seconds with ease timing */
+  position: relative;          /* Sets position context for absolutely positioned children */
+}
+
+/* Product card images */
+.product-card img {
+  width: 100%;                 /* Makes image take full width of its container */
+  height: 250px;               /* Sets fixed height of 200px */
+  object-fit: cover;           /* Ensures image covers the area without distortion (may crop) */
+}
+
+/* Product card headings */
+.product-card h3 {
+  margin: 15px 0 5px;          /* 15px top margin, 0 left/right, 5px bottom margin */
+  font-size: 1.2rem;
+}
+
+.product-card p{
+  color: #07006b;
+}
+
+/* Product information text */
+.info {
+  opacity: 0.7;                /* Makes text 70% opaque (semi-transparent) */
+  font-size: 0.9rem;           /* Sets font size to 0.9 times root font size */
+}
+
+/* Product price styling */
+.price {
+  margin-top: 10px;            /* Adds 10px space above the price */
+  font-size: 1.2rem;           /* Sets font size to 1.2 times root font size */
+  font-weight: bold;           /* Makes price text bold */
+  color: #ffffff;              /* Sets price color to green */
+}
+
+
+
+/* Hover effect for product cards */
+.product-card:hover {
+  transform: translateY(-10px);  /* Moves card up by 10px on hover */
+  box-shadow: 0 20px 40px rgba(29, 185, 84, 0.3);  /* Adds green shadow: x-offset 0, y-offset 20px, blur 40px, color green with 30% opacity */
+}
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* For tablets and small desktops - screens 1024px and below */
+@media screen and (max-width: 1024px) {
+    .products-section {
+        padding: 60px 5%;      /* Reduces padding for medium screens */
+    }
     
-    <div class="category-grid">
-      <!-- Edibles -->
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/sodaze gums.jfif" alt="Sodaze Gummies">
-        <h3>Sodaze Gummies</h3>
-        <h4>R90</h4>
-      </div>
-      <div class="category-card" data-category="cannabis">
-        <img src="assets/images/32.jpg" alt="Tots Indica">
-        <h3>Tots Indica</h3>
-        <h4>R10</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/Apricot Gummies.jfif" alt="Apricot Gummies">
-        <h3>Apricot Gummies</h3>
-        <h4>R64</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/choc chip cookies.jfif" alt="Choc Chip Cookies">
-        <h3>Choc Chip Cookies</h3>
-        <h4>R??</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/sodaze fudges.jfif" alt="Sodaze Fudges">
-        <h3>Sodaze Fudges</h3>
-        <h4>R80</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/Ding Fudges.jfif" alt="Ding Fudges">
-        <h3>Ding Fudges</h3>
-        <h4>R30</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/sour rings.jfif" alt="Sour Rings">
-        <h3>Sour Rings</h3>
-        <h4>R70</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/Ding Edibles Sour Worms.jfif" alt="Ding Edibles Sour Worms">
-        <h3>Ding Edibles Sour Worms</h3>
-        <h4>R50</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/Best Friends.jfif" alt="Best Friends">
-        <h3>Best Friends</h3>
-        <h4>R20</h4>
-      </div>
-      
-      <!-- Cannabis/Flower -->
-      <div class="category-card" data-category="cannabis">
-        <img src="assets/images/28.jpg" alt="OG Kush">
-        <h3>OG Kush</h3>
-        <h4>R46</h4>
-      </div>
-      <div class="category-card" data-category="cannabis">
-        <img src="assets/images/34.jpg" alt="Runts">
-        <h3>Runts</h3>
-        <h4>R78</h4>
-      </div>
-      <div class="category-card" data-category="cannabis">
-        <img src="assets/images/39.jpg" alt="Vanilla Gorilla">
-        <h3>Vanilla Gorilla</h3>
-        <h4>R60</h4>
-      </div>
-      <div class="category-card" data-category="cannabis">
-        <img src="assets/images/29.jpg" alt="Mendlinn">
-        <h3>Mendlinn</h3>
-        <h4>R80</h4>
-      </div>
-      <div class="category-card" data-category="cannabis">
-        <img src="assets/images/avery-meeker-muuZhItgQoE-unsplash.jpg" alt="Blunicorn">
-        <h3>Blunicorn</h3>
-        <h4>R40</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/pharma-hemp-complex-q_vnJenyn9s-unsplash.jpg" alt="Gummie Bears">
-        <h3>Gummie Bears</h3>
-        <h4>R125</h4>
-      </div>
-      <div class="category-card" data-category="rizzlers">
-        <img src="assets/images/greengo.jfif" alt="Greengo Rizzlers">
-        <h3>Greengo Rizzlers</h3>
-        <h4>R65</h4>
-      </div>
-      
-      <!-- Drinks -->
-      <div class="category-card" data-category="drinks">
-        <img src="assets/images/Sodaze Drink.jfif" alt="Sodaze Drink">
-        <h3>Sodaze Drink</h3>
-        <h4>R100</h4>
-      </div>
-      <div class="category-card" data-category="drinks">
-        <img src="assets/images/31.jpg" alt="Lucky Club Juice">
-        <h3>Lucky Club Juice</h3>
-        <h4>R78</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/Bottled Happiness.jfif" alt="Bottled Happiness">
-        <h3>Bottled Happiness</h3>
-        <h4>R44</h4>
-      </div>
+    .products-grid {
+        gap: 25px;             /* Reduces gap between grid items */
+    }
+}
 
-       <div class="category-card" data-category="drinks">
-        <img src="assets/images/blueberry.jpeg" alt="Bottled Happiness">
-        <h3>Lucky Club Blueberry Vanilla</h3>
-        <h4>R44</h4>
-      </div>
-       <div class="category-card" data-category="drinks">
-        <img src="assets/images/purple.jpeg" alt="Bottled Happiness">
-        <h3>Sodaze CBD Blueberry Juice</h3>
-        <h4>R44</h4>
-      </div>
-       <div class="category-card" data-category="drinks">
-        <img src="assets/images/red.jpeg" alt="Bottled Happiness">
-        <h3>Sodaze CBD Cherry Juice</h3>
-        <h4>R44</h4>
-      </div>
+/* For tablets portrait - screens 768px and below */
+@media screen and (max-width: 768px) {
+    .products-section {
+        padding: 50px 4%;      /* Further reduces padding for tablets */
+    }
+    
+    .section-title {
+        font-size: 2.2rem;     /* Slightly smaller title */
+        margin-bottom: 25px;    /* Reduces space below title */
+    }
+    
+    .filter-buttons {
+        margin-bottom: 30px;    /* Reduces space below buttons */
+    }
+    
+    .filter-buttons button {
+        padding: 7px 15px;      /* Smaller button padding */
+        font-size: 0.9rem;      /* Smaller button text */
+        margin: 4px;            /* Smaller margin between buttons */
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  /* Smaller minimum column width */
+        gap: 20px;              /* Further reduced gap */
+    }
+    
+    .product-card img {
+        height: 180px;          /* Shorter images */
+    }
+    
+    .product-card h3 {
+        font-size: 1.1rem;      /* Smaller heading */
+        margin: 12px 0 4px;     /* Adjusted margins */
+    }
+    
+    .price {
+        font-size: 1.1rem;      /* Smaller price text */
+    }
+}
 
-       <div class="category-card" data-category="drinks">
-        <img src="assets/images/apricot.jpeg" alt="Bottled Happiness">
-        <h3>Lucky Club Apricot & Peach Juice</h3>
-        <h4>R44</h4>
-      </div>
-
-       <div class="category-card" data-category="drinks">
-        <img src="assets/images/mango.jpeg" alt="Bottled Happiness">
-        <h3>Luck Club Mango Juice</h3>
-        <h4>R44</h4>
-      </div>
-      
-      <!-- Rizzlers/Accessories -->
+/* For large phones - screens 600px and below */
+@media screen and (max-width: 600px) {
+    .products-section {
+        padding: 40px 3%;       /* Even smaller padding for phones */
+    }
+    
+    .section-title {
+        font-size: 2rem;        /* Smaller title */
+        margin-bottom: 20px;     /* Less space below title */
+    }
+    
+    .filter-buttons {
+        margin-bottom: 25px;     /* Less space below buttons */
+        display: flex;           /* Enables flexbox for better button layout */
+        flex-wrap: wrap;         /* Allows buttons to wrap to next line */
+        justify-content: center; /* Centers buttons horizontally */
+        gap: 8px;                /* Adds 8px space between wrapped buttons */
+    }
+    
+    .filter-buttons button {
+        margin: 0;               /* Removes margin since gap handles spacing */
+        padding: 8px 16px;       /* Adjusted padding */
+        font-size: 0.85rem;      /* Smaller button text */
+        flex: 0 1 auto;          /* Flex properties: don't grow, can shrink, auto basis */
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Even smaller min column */
+        gap: 15px;               /* Smaller gap */
+    }
+    
+    .product-card img {
+        height: 160px;           /* Shorter images */
+    }
+    
    
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/Glorious Joubs Sativa.jfif" alt="Glorious Joubs Sativa">
-        <h3>Glorious Joubs Sativa</h3>
-        <h4>R110</h4>
-      </div>
-      <div class="category-card" data-category="cannabis">
-        <img src="assets/images/29.jpg" alt="Lucky Club Mango">
-        <h3>Lucky Club Mango</h3>
-        <h4>R60</h4>
-      </div>
-      <div class="category-card" data-category="edibles">
-        <img src="assets/images/sodaze lollipops.jfif" alt="Sodaze Lollipops">
-        <h3>Sodaze Lollipops</h3>
-        <h4>R89</h4>
-      </div>
-      <div class="category-card" data-category="rizzlers">
-        <img src="assets/images/OCB.jfif" alt="OCB Organic Hemp">
-        <h3>OCB Organic Hemp</h3>
-        <h4>R23</h4>
-      </div>
-      <div class="category-card" data-category="rizzlers">
-        <img src="assets/images/joint.jpg" alt="OHIS Hemp Wraps">
-        <h3>OHIS Hemp Wraps</h3>
-        <h4>R50</h4>
-      </div>
+}
 
-       <div class="category-card" data-category="rizzlers">
-        <img src="assets/images/honey.jpg" alt="OHIS Hemp Wraps">
-        <h3>OHIS Hemp Wraps</h3>
-        <h4>R50</h4>
-      </div>
+/* For small phones - screens 480px and below */
+@media screen and (max-width: 480px) {
+    .products-section {
+        padding: 30px 3%;        /* Minimal padding */
+    }
+    
+    .section-title {
+        font-size: 1.8rem;       /* Even smaller title */
+        margin-bottom: 20px;      /* Less space below */
+    }
+    
+    .filter-buttons button {
+        padding: 6px 12px;       /* Smaller buttons */
+        font-size: 0.8rem;       /* Smaller text */
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;  /* Single column layout */
+        gap: 20px;                   /* Restores gap for single column */
+        max-width: 320px;            /* Limits maximum width */
+        margin: 0 auto;              /* Centers the grid horizontally */
+    }
+    
+    .product-card img {
+        height: 200px;           /* Taller images for single column */
+    }
+    
+    .product-card h3 {
+        font-size: 1rem;         /* Smaller heading */
+    }
+    
+    .info {
+        font-size: 0.85rem;      /* Smaller info text */
+    }
+    
+    .price {
+        font-size: 1rem;         /* Smaller price */
+    }
+}
 
-       <div class="category-card" data-category="rizzlers">
-        <img src="assets/images/hoo.jpg" alt="OHIS Hemp Wraps">
-        <h3>OHIS Hemp Wraps</h3>
-        <h4>R50</h4>
-      </div>
+/* For very small phones - screens 360px and below */
+@media screen and (max-width: 360px) {
+    .products-section {
+        padding: 20px 2%;        /* Minimum padding */
+    }
+    
+    .section-title {
+        font-size: 1.6rem;       /* Smallest title */
+    }
+    
+    .filter-buttons button {
+        padding: 5px 10px;       /* Smallest buttons */
+        font-size: 0.75rem;      /* Smallest text */
+    }
+    
+    .products-grid {
+        max-width: 280px;        /* Narrower grid */
+    }
+    
+    .product-card img {
+        height: 180px;           /* Smaller images */
+    }
+    
+    
+}
 
-       <div class="category-card" data-category="edibles">
-        <img src="assets/images/luckyclubgummies.jpg" alt="OHIS Hemp Wraps">
-        <h3>Lucky Club gummies Peach</h3>
-        <h4>R50</h4>
-      </div>
+/* For landscape mode on phones */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);  /* 3 columns in landscape */
+    }
+    
+    .product-card img {
+        height: 150px;           /* Shorter images in landscape */
+    }
+}
 
-       <div class="category-card" data-category="rizzlers">
-        <img src="assets/images/Chuff.jpg" alt="OHIS Hemp Wraps">
-        <h3>Lucky Club gummies Peach</h3>
-        <h4>R50</h4>
-      </div>
-    </div>
-  </div>
-</section>
+/* For tablets in landscape */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);  /* 3 columns for tablet landscape */
+    }
+}
 
+/* For large desktops - screens 1600px and above */
+@media screen and (min-width: 1600px) {
+    .products-section {
+        padding: 100px 10%;      /* More padding for large screens */
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  /* Larger minimum columns */
+        gap: 35px;               /* More space between items */
+    }
+    
+    .product-card img {
+        height: 240px;           /* Taller images */
+    }
+    
+    .section-title {
+        font-size: 3rem;         /* Larger title */
+    }
+}
 
+/* For 4K screens - screens 2000px and above */
+@media screen and (min-width: 2000px) {
+    .products-section {
+        padding: 120px 12%;      /* Maximum padding */
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /* Largest minimum columns */
+        gap: 40px;               /* Maximum gap */
+    }
+    
+    .product-card img {
+        height: 280px;           /* Tallest images */
+    }
+    
+    .section-title {
+        font-size: 3.5rem;       /* Largest title */
+    }
+    
+    .filter-buttons button {
+        padding: 12px 24px;      /* Larger buttons */
+        font-size: 1.2rem;       /* Larger button text */
+    }
+}
+</style>
 
 
 <style>
@@ -980,98 +1451,19 @@
 
 
 <script>
-// Wait for DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-  // Get all filter buttons and category cards
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const categoryCards = document.querySelectorAll('.category-card');
-  const categoryGrid = document.querySelector('.category-grid');
-  
-  // Create container for no results message
-  const noResultsDiv = document.createElement('div');
-  noResultsDiv.className = 'no-results';
-  noResultsDiv.style.display = 'none';
-  categoryGrid.appendChild(noResultsDiv);
-  
-  // Store total count for each category
-  const categoryCounts = {
-    all: categoryCards.length,
-    cannabis: document.querySelectorAll('[data-category="cannabis"]').length,
-    edibles: document.querySelectorAll('[data-category="edibles"]').length,
-    drinks: document.querySelectorAll('[data-category="drinks"]').length,
-    rizzlers: document.querySelectorAll('[data-category="rizzlers"]').length
-  };
-  
-  // Function to show no results message
-  function showNoResultsMessage(visibleCount, filterValue) {
-    if (visibleCount === 0) {
-      const categoryName = filterValue === 'all' ? 'products' : filterValue;
-      noResultsDiv.innerHTML = `
-        <p>😢 No ${categoryName} found</p>
-        <button class="reset-filters" onclick="resetFilters()">View All Products</button>
-      `;
-      noResultsDiv.style.display = 'block';
+function filterProducts(category) {
+  const products = document.querySelectorAll('.product-card');
+
+  products.forEach(product => {
+    if (category === 'all') {
+      product.style.display = "block";
     } else {
-      noResultsDiv.style.display = 'none';
+      product.classList.contains(category)
+        ? product.style.display = "block"
+        : product.style.display = "none";
     }
-  }
-  
-  // Add click event to each filter button
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remove active class from all buttons
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      
-      // Add active class to clicked button
-      this.classList.add('active');
-      
-      // Get filter value
-      const filterValue = this.getAttribute('data-filter');
-      
-      // Add loading class for animation
-      categoryGrid.classList.add('loading');
-      
-      // Small delay for smooth animation
-      setTimeout(() => {
-        // Filter cards
-        let visibleCount = 0;
-        categoryCards.forEach(card => {
-          const cardCategory = card.getAttribute('data-category');
-          if (filterValue === 'all' || cardCategory === filterValue) {
-            card.style.display = 'block';
-            visibleCount++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-        
-        // Remove loading class
-        categoryGrid.classList.remove('loading');
-        
-        // Show "no results" message if no items found
-        showNoResultsMessage(visibleCount, filterValue);
-        
-        // Update URL hash without refreshing page
-        window.location.hash = filterValue;
-      }, 300);
-    });
   });
-  
-  // Reset filters function
-  window.resetFilters = function() {
-    // Trigger click on All Products button
-    document.querySelector('[data-filter="all"]').click();
-  };
-  
-  // Check URL hash on page load
-  if (window.location.hash) {
-    const filterValue = window.location.hash.substring(1);
-    const targetButton = document.querySelector(`[data-filter="${filterValue}"]`);
-    if (targetButton) {
-      targetButton.click();
-    }
-  }
-});
+}
 </script>
 
 <script>
@@ -1125,7 +1517,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-
+// faq /
 <script>
   
   const faqItems = document.querySelectorAll(".faq-item");
