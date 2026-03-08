@@ -508,14 +508,14 @@
   <div class="container">
     <h2 class="section-title">Our Products</h2>
 
-    <div class="filter-buttons">
-      <button onclick="filterProducts('all')">All</button>
-      <button onclick="filterProducts('cannabis')">Cannabis</button>
-      <button onclick="filterProducts('edible')">Edibles</button>
-      <button onclick="filterProducts('gummies')">Gummies</button>
+   <div class="filter-buttons"> 
+    <button onclick="filterProducts('all')">All</button> 
+    <button onclick="filterProducts('cannabis')">Cannabis</button>
+     <button onclick="filterProducts('edible')">Edibles</button>
+      <button onclick="filterProducts('gummies')">Gummies</button> 
       <button onclick="filterProducts('drink')">Drinks</button>
-      <button onclick="filterProducts('other')">Other</button>
-    </div>
+       <button onclick="filterProducts('other')">Other</button> 
+      </div>
 
     <div class="products-grid" id="products-grid">
                 <!-- Flower / Gummies -->
@@ -941,367 +941,351 @@
     </section>
 
 <style>
-/* Main products section container */
-.products-section {
-  padding: 80px 8%;           /* Top/bottom padding 80px, left/right padding 8% of viewport */
-  text-align: center;          /* Centers all text content inside this section */
+
+/* ============================= */
+/* PRODUCTS SECTION */
+/* ============================= */
+
+.products-section{
+    padding:80px 6%;
+    background:#f8f8f8;
+    text-align:center;
 }
 
-/* Main title styling */
-.section-title {
-  font-size: 2.5rem;           /* Sets title size to 2.5 times the root font size */
-  margin-bottom: 30px;         /* Adds 30px space below the title */
-  background: #00bd00;  /* Creates green gradient from left to right */
-  -webkit-background-clip: text;  /* Clips background to text only (Webkit browsers) */
-  -webkit-text-fill-color: transparent;  /* Makes text transparent to show gradient (Webkit browsers) */
+/* TITLE */
+
+.section-title{
+    font-size:2.6rem;
+    font-weight:700;
+    margin-bottom:40px;
+    color:#00bd00;
 }
 
-/* Container for filter buttons */
-.filter-buttons {
-  margin-bottom: 40px;         /* Adds 40px space below the button container */
+
+/* ============================= */
+/* FILTER BUTTONS */
+/* ============================= */
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:40px;
 }
 
-/* Individual filter button styling */
-.filter-buttons button {
-  margin: 5px;                 /* Adds 5px space around each button */
-  padding: 8px 18px;           /* 8px top/bottom, 18px left/right padding inside buttons */
-  border: none;                /* Removes default button border */
-  border-radius: 0px;         /* Makes buttons rounded with 20px corner radius */
-  background: #00bd00;         /* Sets background color to green */
-  color: black;                /* Sets text color to black */
-  font-weight: 600;           /* Makes button text bold */
-  cursor: pointer;             /* Changes cursor to pointer on hover */
-  transition: 0.3s;            /* Smooth transition for hover effects over 0.3 seconds */
+/* BUTTON STYLE */
+
+.filter-buttons button{
+    padding:10px 22px;
+    border:none;
+    background:#00bd00;
+    color:#fff;
+    font-weight:600;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:15px;
+    white-space:nowrap;
 }
 
-/* Hover state for filter buttons */
-.filter-buttons button:hover {
-  background: #00ff99;         /* Changes background to lighter green on hover */
+/* HOVER */
+
+.filter-buttons button:hover{
+    background:#009c00;
+    transform:translateY(-2px);
 }
 
-/* Products grid container */
-.products-grid {
-  display: grid;               /* Enables CSS Grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Creates responsive columns: minimum 250px, maximum 1 fraction of available space */
-  gap: 30px;                   /* Adds 30px space between grid items */
+/* ACTIVE BUTTON */
+
+.filter-buttons button.active{
+    background:#222;
+    color:#fff;
 }
 
-/* Individual product card */
-.product-card {
-  background: #00bd00;         /* Sets dark gray background color */
-  border-radius: 0px;         /* Rounds the corners by 20px */
-  overflow: hidden;            /* Hides any content that overflows the rounded corners */
-  padding-bottom: 10px;        /* Adds 20px padding at the bottom inside the card */
-  transition: 0.4s ease;       /* Smooth transition for hover effects over 0.4 seconds with ease timing */
-  position: relative;          /* Sets position context for absolutely positioned children */
+
+/* ============================= */
+/* PRODUCT GRID */
+/* ============================= */
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:28px;
 }
 
-/* Product card images */
-.product-card img {
-  width: 100%;                 /* Makes image take full width of its container */
-  height: 250px;               /* Sets fixed height of 200px */
-  object-fit: cover;           /* Ensures image covers the area without distortion (may crop) */
+
+/* ============================= */
+/* PRODUCT CARD */
+/* ============================= */
+
+.product-card{
+    background:#ffffff;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
 }
 
-/* Product card headings */
-.product-card h3 {
-  margin: 15px 0 5px;          /* 15px top margin, 0 left/right, 5px bottom margin */
-  font-size: 1.2rem;
+.product-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 14px 30px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+
+.product-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* TEXT */
+
+.product-card h3{
+    margin-top:15px;
+    font-size:1.15rem;
+    color:#222;
 }
 
 .product-card p{
-  color: #07006b;
+    margin:6px 0;
 }
 
-/* Product information text */
-.info {
-  opacity: 0.7;                /* Makes text 70% opaque (semi-transparent) */
-  font-size: 0.9rem;           /* Sets font size to 0.9 times root font size */
+.info{
+    font-size:0.9rem;
+    color:#777;
 }
 
-/* Product price styling */
-.price {
-  margin-top: 10px;            /* Adds 10px space above the price */
-  font-size: 1.2rem;           /* Sets font size to 1.2 times root font size */
-  font-weight: bold;           /* Makes price text bold */
-  color: #ffffff;              /* Sets price color to green */
+.price{
+    font-size:1.2rem;
+    font-weight:700;
+    color:#00bd00;
+    margin-bottom:15px;
 }
 
 
+/* ============================= */
+/* PRODUCT IMAGE SLIDER */
+/* ============================= */
 
-/* Hover effect for product cards */
-.product-card:hover {
-  transform: translateY(-10px);  /* Moves card up by 10px on hover */
-  box-shadow: 0 20px 40px rgba(29, 185, 84, 0.3);  /* Adds green shadow: x-offset 0, y-offset 20px, blur 40px, color green with 30% opacity */
-}
-
-/* ========== RESPONSIVE MEDIA QUERIES ========== */
-
-/* For tablets and small desktops - screens 1024px and below */
-@media screen and (max-width: 1024px) {
-    .products-section {
-        padding: 60px 5%;      /* Reduces padding for medium screens */
-    }
-    
-    .products-grid {
-        gap: 25px;             /* Reduces gap between grid items */
-    }
-}
-
-/* For tablets portrait - screens 768px and below */
-@media screen and (max-width: 768px) {
-    .products-section {
-        padding: 50px 4%;      /* Further reduces padding for tablets */
-    }
-    
-    .section-title {
-        font-size: 2.2rem;     /* Slightly smaller title */
-        margin-bottom: 25px;    /* Reduces space below title */
-    }
-    
-    .filter-buttons {
-        margin-bottom: 30px;    /* Reduces space below buttons */
-    }
-    
-    .filter-buttons button {
-        padding: 7px 15px;      /* Smaller button padding */
-        font-size: 0.9rem;      /* Smaller button text */
-        margin: 4px;            /* Smaller margin between buttons */
-    }
-    
-    .products-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  /* Smaller minimum column width */
-        gap: 20px;              /* Further reduced gap */
-    }
-    
-    .product-card img {
-        height: 180px;          /* Shorter images */
-    }
-    
-    .product-card h3 {
-        font-size: 1.1rem;      /* Smaller heading */
-        margin: 12px 0 4px;     /* Adjusted margins */
-    }
-    
-    .price {
-        font-size: 1.1rem;      /* Smaller price text */
-    }
-}
-
-/* For large phones - screens 600px and below */
-@media screen and (max-width: 600px) {
-    .products-section {
-        padding: 40px 3%;       /* Even smaller padding for phones */
-    }
-    
-    .section-title {
-        font-size: 2rem;        /* Smaller title */
-        margin-bottom: 20px;     /* Less space below title */
-    }
-    
-    .filter-buttons {
-        margin-bottom: 25px;     /* Less space below buttons */
-        display: flex;           /* Enables flexbox for better button layout */
-        flex-wrap: wrap;         /* Allows buttons to wrap to next line */
-        justify-content: center; /* Centers buttons horizontally */
-        gap: 8px;                /* Adds 8px space between wrapped buttons */
-    }
-    
-    .filter-buttons button {
-        margin: 0;               /* Removes margin since gap handles spacing */
-        padding: 8px 16px;       /* Adjusted padding */
-        font-size: 0.85rem;      /* Smaller button text */
-        flex: 0 1 auto;          /* Flex properties: don't grow, can shrink, auto basis */
-    }
-    
-    .products-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Even smaller min column */
-        gap: 15px;               /* Smaller gap */
-    }
-    
-    .product-card img {
-        height: 160px;           /* Shorter images */
-    }
-    
-   
-}
-
-/* For small phones - screens 480px and below */
-@media screen and (max-width: 480px) {
-    .products-section {
-        padding: 30px 3%;        /* Minimal padding */
-    }
-    
-    .section-title {
-        font-size: 1.8rem;       /* Even smaller title */
-        margin-bottom: 20px;      /* Less space below */
-    }
-    
-    .filter-buttons button {
-        padding: 6px 12px;       /* Smaller buttons */
-        font-size: 0.8rem;       /* Smaller text */
-    }
-    
-    .products-grid {
-        grid-template-columns: 1fr;  /* Single column layout */
-        gap: 20px;                   /* Restores gap for single column */
-        max-width: 320px;            /* Limits maximum width */
-        margin: 0 auto;              /* Centers the grid horizontally */
-    }
-    
-    .product-card img {
-        height: 200px;           /* Taller images for single column */
-    }
-    
-    .product-card h3 {
-        font-size: 1rem;         /* Smaller heading */
-    }
-    
-    .info {
-        font-size: 0.85rem;      /* Smaller info text */
-    }
-    
-    .price {
-        font-size: 1rem;         /* Smaller price */
-    }
-}
-
-/* For very small phones - screens 360px and below */
-@media screen and (max-width: 360px) {
-    .products-section {
-        padding: 20px 2%;        /* Minimum padding */
-    }
-    
-    .section-title {
-        font-size: 1.6rem;       /* Smallest title */
-    }
-    
-    .filter-buttons button {
-        padding: 5px 10px;       /* Smallest buttons */
-        font-size: 0.75rem;      /* Smallest text */
-    }
-    
-    .products-grid {
-        max-width: 280px;        /* Narrower grid */
-    }
-    
-    .product-card img {
-        height: 180px;           /* Smaller images */
-    }
-    
-    
-}
-
-/* For landscape mode on phones */
-@media screen and (max-width: 900px) and (orientation: landscape) {
-    .products-grid {
-        grid-template-columns: repeat(3, 1fr);  /* 3 columns in landscape */
-    }
-    
-    .product-card img {
-        height: 150px;           /* Shorter images in landscape */
-    }
-}
-
-/* For tablets in landscape */
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .products-grid {
-        grid-template-columns: repeat(3, 1fr);  /* 3 columns for tablet landscape */
-    }
-}
-
-/* For large desktops - screens 1600px and above */
-@media screen and (min-width: 1600px) {
-    .products-section {
-        padding: 100px 10%;      /* More padding for large screens */
-    }
-    
-    .products-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  /* Larger minimum columns */
-        gap: 35px;               /* More space between items */
-    }
-    
-    .product-card img {
-        height: 240px;           /* Taller images */
-    }
-    
-    .section-title {
-        font-size: 3rem;         /* Larger title */
-    }
-}
-
-/* For 4K screens - screens 2000px and above */
-@media screen and (min-width: 2000px) {
-    .products-section {
-        padding: 120px 12%;      /* Maximum padding */
-    }
-    
-    .products-grid {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /* Largest minimum columns */
-        gap: 40px;               /* Maximum gap */
-    }
-    
-    .product-card img {
-        height: 280px;           /* Tallest images */
-    }
-    
-    .section-title {
-        font-size: 3.5rem;       /* Largest title */
-    }
-    
-    .filter-buttons button {
-        padding: 12px 24px;      /* Larger buttons */
-        font-size: 1.2rem;       /* Larger button text */
-    }
-}
-</style>
-
-
-<style>
-  .product-slider{
-  position: relative;
-  overflow: hidden;
- 
+.product-slider{
+    overflow:hidden;
+    width:100%;
 }
 
 .slides{
-  display: flex;
-  transition: transform 0.4s ease;
+    display:flex;
+    transition:transform 0.5s ease;
 }
 
 .slides img{
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  flex-shrink: 0;
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    flex-shrink:0;
 }
 
-.slide-btn{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  font-size: 18px;
-  padding: 6px 10px;
-  cursor: pointer;
-  z-index: 2;
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+
+/* TABLETS */
+
+@media screen and (max-width:1024px){
+
+.products-section{
+    padding:60px 5%;
 }
 
-.prev{
-  left: 5px;
+.products-grid{
+    gap:25px;
 }
 
-.next{
-  right: 5px;
 }
 
-.slide-btn:hover{
-  background: rgba(0,0,0,0.8);
+
+/* TABLET + MOBILE (SWIPE FILTER BUTTONS) */
+
+@media screen and (max-width:768px){
+
+.products-section{
+    padding:50px 4%;
 }
+
+.section-title{
+    font-size:2.2rem;
+}
+
+.products-grid{
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.product-card img{
+    height:180px;
+}
+
+/* swipeable category bar */
+
+.filter-buttons{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    justify-content:flex-start;
+    gap:10px;
+    padding-bottom:10px;
+}
+
+/* hide scrollbar */
+
+.filter-buttons::-webkit-scrollbar{
+    display:none;
+}
+
+.filter-buttons button{
+    flex:0 0 auto;
+    padding:8px 18px;
+    font-size:14px;
+}
+
+}
+
+
+/* LARGE PHONES */
+
+@media screen and (max-width:600px){
+
+.products-section{
+    padding:40px 3%;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+.products-grid{
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.product-card img{
+    height:160px;
+}
+
+}
+
+
+/* SMALL PHONES */
+
+@media screen and (max-width:480px){
+
+.products-section{
+    padding:30px 3%;
+}
+
+.section-title{
+    font-size:1.8rem;
+}
+
+.products-grid{
+    grid-template-columns:1fr;
+    max-width:320px;
+    margin:0 auto;
+}
+
+.product-card img{
+    height:200px;
+}
+
+.product-card h3{
+    font-size:1rem;
+}
+
+.info{
+    font-size:0.85rem;
+}
+
+.price{
+    font-size:1rem;
+}
+
+}
+
+
+/* VERY SMALL PHONES */
+
+@media screen and (max-width:360px){
+
+.section-title{
+    font-size:1.6rem;
+}
+
+.products-grid{
+    max-width:280px;
+}
+
+.product-card img{
+    height:180px;
+}
+
+}
+
+
+/* LARGE DESKTOP */
+
+@media screen and (min-width:1600px){
+
+.products-section{
+    padding:100px 10%;
+}
+
+.products-grid{
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.product-card img{
+    height:240px;
+}
+
+.section-title{
+    font-size:3rem;
+}
+
+}
+
+
+/* 4K SCREENS */
+
+@media screen and (min-width:2000px){
+
+.products-section{
+    padding:120px 12%;
+}
+
+.products-grid{
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+}
+
+.product-card img{
+    height:280px;
+}
+
+.section-title{
+    font-size:3.5rem;
+}
+
+.filter-buttons button{
+    padding:12px 24px;
+    font-size:1.2rem;
+}
+
+}
+
 </style>
-
 
 <style>
   /* ================= JAH HERBS FAQ SECTION ================= */
