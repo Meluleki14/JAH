@@ -571,7 +571,7 @@
                     <img src="assets/images/sour rings.jfif" alt="Sour Rings">
                    
                     <h3>Sour Rings</h3>
-                    <p class="info">100mg Sativa</p>
+                    <p class="info">10mg Sativa</p>
                     <p class="price">R70</p>
                 </div>
 
@@ -589,7 +589,7 @@
                     <img src="assets/images/Best Friends.jfif" alt="Best Friends">
                   
                     <h3>Best Friends</h3>
-                    <p class="info">100mg Sativa</p>
+                    <p class="info">10mg Sativa</p>
                     <p class="price">R84</p>
                 </div>
 
@@ -1382,6 +1382,295 @@
 }
 </style>
 
+
+
+<section class="price-cards">
+<div class="container">
+  <h1>Potency Options Available</h1>
+
+    <p>
+      Our <strong>edibles, gummies, and cookies</strong> are available in multiple strength options.
+      Most products come in <strong>15mg</strong> and <strong>20mg</strong> servings.
+      Prices may vary depending on the product.
+    </p>
+  <div class="price-card">
+    <img src="assets/images/Apricot Gummies.jfif" alt="Apricot Gummies">
+
+    <h3>Apricot Gummies</h3>
+
+    <div class="price-row">
+      <span>15mg</span>
+      <span>R84</span>
+    </div>
+
+    <div class="price-row">
+      <span>20mg</span>
+      <span>R100</span>
+    </div>
+
+  </div>
+
+
+  <div class="price-card">
+    <img src="assets/images/sodaze gums.jfif" alt="Sour Gummies">
+
+    <h3>Sodaze Gummies</h3>
+
+    <div class="price-row">
+      <span>15mg</span>
+      <span>R84</span>
+    </div>
+
+    <div class="price-row">
+      <span>20mg</span>
+      <span>R100</span>
+    </div>
+
+  </div>
+
+
+  <div class="price-card">
+    <img src="assets/images/choc chip cookies.jfif" alt="Chocolate Cookies">
+
+    <h3>Chocolate Cookies</h3>
+
+    <div class="price-row">
+      <span>15mg</span>
+      <span>R90</span>
+    </div>
+
+    <div class="price-row">
+      <span>20mg</span>
+      <span>R110</span>
+    </div>
+
+  </div>
+
+  <div class="price-card">
+    <img src="assets/images/Bottled Happiness.jfif" alt="Apricot Gummies">
+
+    <h3>Bottled Happiness Gummies</h3>
+
+    <div class="price-row">
+      <span>15mg</span>
+      <span>R84</span>
+    </div>
+
+    <div class="price-row">
+      <span>20mg</span>
+      <span>R100</span>
+    </div>
+
+  </div>
+
+
+  <div class="price-card">
+    <img src="assets/images/Glorious Joubs Sativa.jfif" alt="Sour Gummies">
+
+    <h3>Sour Gummies</h3>
+
+    <div class="price-row">
+      <span>15mg</span>
+      <span>R84</span>
+    </div>
+
+    <div class="price-row">
+      <span>20mg</span>
+      <span>R100</span>
+    </div>
+
+  </div>
+
+
+  <div class="price-card">
+    <img src="assets/images/Best Friends.jfif" alt="Chocolate Cookies">
+
+    <h3>Chocolate Cookies</h3>
+
+    <div class="price-row">
+      <span>15mg</span>
+      <span>R90</span>
+    </div>
+
+    <div class="price-row">
+      <span>20mg</span>
+      <span>R110</span>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<style>
+.price-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  padding:60px 6%;
+}
+
+.price-card {
+  background: #111;
+  text-align: center;
+  border-radius: 14px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: transform 0.25s ease;
+  border: 5px solid #00bd00; /* blue border */
+}
+
+.price-card:hover{
+  transform:translateY(-6px);
+}
+
+.price-cards h1{
+  grid-column:1/-1;
+  font-weight: 600;
+  color:#00bd00;
+  text-align:center;
+  margin-bottom:10px;
+  letter-spacing:1px;
+}
+
+/* Paragraph */
+.price-cards p{
+  grid-column:1/-1;
+  max-width:700px;
+  margin:0 auto 40px auto;
+  text-align:center;
+  color:black;
+  line-height:1.6;
+  font-size: 16px;
+}
+
+.price-cards .container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.price-card img{
+  display: block;
+  width: 140px;        /* change this to control the size */
+  height: auto;
+  margin: 20px auto;   /* centers the image horizontally */
+  object-fit: contain;
+}
+
+.price-card h3{
+  padding:15px;
+  font-size:1.1rem;
+}
+
+.price-row{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 15px;
+  border-top:1px solid #222;
+  font-size:0.95rem;
+}
+
+.price-row span:last-child{
+  color:#00c853;
+  font-weight:bold;
+}
+
+
+/* ===================== */
+/* Large screens (Desktop) */
+/* ===================== */
+@media (max-width: 1200px){
+  .price-cards .container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ===================== */
+/* Tablets */
+/* ===================== */
+@media (max-width: 900px){
+
+  .price-cards{
+    padding:50px 5%;
+  }
+
+  .price-cards .container{
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+  }
+
+  .price-card img{
+    width:120px;
+  }
+
+  .price-cards h1{
+    font-size:28px;
+  }
+
+  .price-cards p{
+    font-size:15px;
+    max-width:600px;
+  }
+
+}
+
+
+/* ===================== */
+/* Mobile devices */
+/* ===================== */
+@media (max-width: 600px){
+
+  .price-cards{
+    padding:40px 20px;
+  }
+
+  /* Make the container a single-column grid */
+  .price-cards .container{
+    grid-template-columns: 1fr;
+    gap:20px;
+  }
+
+  /* Make all cards take full width of container */
+  .price-card{
+    width: 100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* optional, ensures content is distributed */
+  }
+
+  /* Keep images consistent */
+  .price-card img{
+    width:110px;
+    height:auto;
+    margin: 20px auto;
+  }
+
+  .price-card h3{
+    font-size:1rem;
+  }
+
+  .price-row{
+    font-size:0.9rem;
+  }
+
+  .price-cards h1{
+    font-size:24px;
+  }
+
+  .price-cards p{
+    font-size:14px;
+    line-height:1.5;
+  }
+
+}
+</style>
+
+
+
+
 <section class="faq">
   <div class="container">
     <h2 class="faq-title">Frequently Asked Questions</h2>
@@ -1469,12 +1758,12 @@
     </div>
 
    <!-- Footer Starts Here -->
-   <footer>
+    <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-3 footer-item">
             <h4>JAH HERBS</h4>
-            <p>Roots run deep in Zion. Sacred herbs only natural healing handed down by the elders.</p>
+            <p>Roots run deep in Zion. I-n-I cultivate sacred herbs the Rastafari way — no chemicals, only natural healing handed down by the elders.</p>
             <ul class="social-icons">
               <li><a href="https://www.facebook.com/profile.php?id=61584622234103" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a href="https://www.instagram.com/jahherbs1/"><i class="fa fa-instagram"></i></a></li>
@@ -1511,6 +1800,7 @@
         </div>
       </div>
     </footer>
+
     <style>
 
 .footer0-logo {
@@ -1663,7 +1953,7 @@ document.querySelectorAll('.product-slider').forEach(slider => {
     setInterval(() => {
         index = (index + 1) % images.length;
         slides.style.transform = `translateX(-${index * 100}%)`;
-    }, 7000);
+    }, 3000);
 
 });
 
