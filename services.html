@@ -504,172 +504,82 @@
 
   
 
- <section class="products-section">
-  <div class="container">
-    <h2 class="section-title">Our Products</h2>
+<section class="products-section">
 
-   <div class="filter-buttons"> 
-    <button onclick="filterProducts('all')">All</button> 
-    <button onclick="filterProducts('cannabis')">Cannabis</button>
-     <button onclick="filterProducts('edible')">Edibles</button>
-      <button onclick="filterProducts('gummies')">Gummies</button> 
-      <button onclick="filterProducts('drink')">Drinks</button>
-       <button onclick="filterProducts('other')">Other</button> 
-      </div>
+<div class="container">
 
-    <div class="products-grid" id="products-grid">
-                <!-- Flower / Gummies -->
-                
+<h2 class="section-title">Our Products</h2>
 
-                <!-- Joint / Cannabis -->
-                <div class="product-card cannabis">
-                    <img src="assets/images/32.jpg" alt="TOTS INDICA">
-                    
-                    <h3>TOTS INDICA</h3>
-                    <p class="info">THC: 18%</p>
-                    <p class="price">R12</p>
-                </div>
+<div class="filter-buttons"> 
+<button onclick="filterProducts('all',this)" class="active">All</button> 
+<button onclick="filterProducts('cannabis',this)">Cannabis</button>
+<button onclick="filterProducts('edible',this)">Edibles</button>
+<button onclick="filterProducts('gummies',this)">Gummies</button> 
+<button onclick="filterProducts('drink',this)">Drinks</button>
+<button onclick="filterProducts('other',this)">Other</button> 
+</div>
 
-                <!-- Gummies -->
-                <div class="product-card gummies">
-                    <img src="assets/images/Apricot Gummies.jfif" alt="Apricot Gummies">
-                   
-                    <h3>Apricot Gummies</h3>
-                    <p class="info">THC: 18%</p>
-                    <p class="price">R84</p>
-                </div>
+<div class="products-grid" id="products-grid">
 
-                <!-- Edibles -->
-                <div class="product-card edible">
-                    <img src="assets/images/choc chip cookies.jfif" alt="Choc Chip Cookies">
-                    
-                    <h3>Choc Chip Cookies</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R90</p>
-                </div>
+<!-- Cannabis -->
+<div class="product-card cannabis">
+<img src="assets/images/32.jpg">
+<h3>Tots Indica</h3>
+<p class="info">THC: 18%</p>
+<p class="price">R120</p>
+</div>
 
-                <!-- Edibles -->
-                <div class="product-card edible">
-                    <img src="assets/images/sodaze fudges.jfif" alt="Sodaze Fudges">
-                   
-                    <h3>Sodaze Fudges</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R80</p>
-                </div>
+<!-- Edibles -->
+<div class="product-card edible">
+<img src="assets/images/sodaze fudges.jfif">
+<h3>Sodaze Fudges</h3>
+<p class="info">50 mg Sativa</p>
+<p class="price">R80</p>
+</div>
 
-                <!-- Edibles -->
-                <div class="product-card edible">
-                    <img src="assets/images/Ding Fudges.jfif" alt="Ding Fudges">
-                   
-                    <h3>Ding Fudges</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R80</p>
-                </div>
+<!-- Gummies -->
+<div class="product-card gummies">
 
-                <!-- Gummies -->
-                <div class="product-card gummies">
-                    <img src="assets/images/sour rings.jfif" alt="Sour Rings">
-                   
-                    <h3>Sour Rings</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R70</p>
-                </div>
+<img src="assets/images/Apricot Gummies.jfif">
+<h3>Apricot Gummies</h3>
 
-                <!-- Gummies -->
-                <div class="product-card gummies">
-                    <img src="assets/images/Ding Edibles Sour Worms.jfif" alt="Ding Edibles Sour Worms">
-                   
-                    <h3>Ding Edibles Sour Worms</h3>
-                    <p class="info">200mg Sativa and Indica</p>
-                    <p class="price">R148</p>
-                </div>
+<button class="potency-btn">View Strength Options</button>
 
-                <!-- Gummies -->
-                <div class="product-card gummies">
-                    <img src="assets/images/Best Friends.jfif" alt="Best Friends">
-                  
-                    <h3>Best Friends</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R84</p>
-                </div>
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R84</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R100</span>
+</div>
+</div>
 
-                 <div class="product-card other">
-                    <img src="assets/images/lighter.jpeg" alt="">
-                  
-                    <h3>Lighter</h3>
-                    <p class="info"></p>
-                    <p class="price">R35</p>
-                </div>
+</div>
 
+<!-- Cannabis -->
+<div class="product-card cannabis">
+<img src="assets/images/28.jpg">
+<h3>OG Kush</h3>
+<p class="info">Indoor Hybrid</p>
+<p class="price">R80</p>
+</div>
 
-                <!-- Cannabis -->
-                <div class="product-card cannabis">
-                    <img src="assets/images/28.jpg" alt="OG Kush">
-          
-                    <h3>OG Kush</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R80</p>
-                </div>
+<div class="product-card cannabis">
+<img src="assets/images/34.jpg">
+<h3>Runts</h3>
+<p class="info">Indoor</p>
+<p class="price">R50</p>
+</div>
 
-                <!-- Cannabis -->
-                <div class="product-card cannabis">
-                    <img src="assets/images/34.jpg" alt="Runts">
-              
-                    <h3>Runts</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R50</p>
-                </div>
+<div class="product-card cannabis">
+<img src="assets/images/39.jpg">
+<h3>Vanilla Gorilla</h3>
+<p class="info">Hybrid</p>
+<p class="price">R80</p>
+</div>
 
-                <!-- Cannabis -->
-                <div class="product-card cannabis">
-                    <img src="assets/images/39.jpg" alt="Vanilla Gorilla">
-                
-                    <h3>Vanilla Gorilla</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R80</p>
-                </div>
-
-                <!-- Cannabis -->
-                <div class="product-card cannabis">
-                    <img src="assets/images/29.jpg" alt="Mendlinn">
-                
-                    <h3>Mendlinn</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R80</p>
-                </div>
-                <div class="product-card cannabis">
-                    <img src="assets/images/White Runts.jpeg" alt="Mendlinn">
-                
-                    <h3>White Runts Indoor Hybrid</h3>
-                    <p class="info">Per gram</p>
-                    <p class="price">R80</p>
-                </div>
-                <div class="product-card cannabis">
-                    <img src="assets/images/Mac Cultivia.jpeg" alt="Mendlinn">
-                
-                    <h3>Mac Cultivia Indoor Hybrid</h3>
-                    <p class="info">Per gram</p>
-                    <p class="price">R70</p>
-                </div>
-                
-
-                <!-- Cannabis -->
-                <div class="product-card cannabis">
-                    <img src="assets/images/avery-meeker-muuZhItgQoE-unsplash.jpg" alt="Blunicorn Tunnel Hybrid">
-                  
-                    <h3>Blunicorn Tunnel Hybrid</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R50</p>
-                </div>
-
-                <!-- Gummies -->
-                <div class="product-card gummies">
-                    <img src="assets/images/pharma-hemp-complex-q_vnJenyn9s-unsplash.jpg" alt="Gummie Bears">
-                  
-                    <h3>Gummie Bears</h3>
-                    <p class="info">10mg Sativa</p>
-                    <p class="price">R84</p>
-                </div>
 
                 <!-- Other -->
                 <div class="product-card other">
@@ -698,14 +608,44 @@
                     <p class="price">R70</p>
                 </div>
 
-                <!-- Gummies -->
-                <div class="product-card gummies">
-                    <img src="assets/images/Bottled Happiness.jfif" alt="Bottled Happiness">
-              
-                    <h3>Bottled Happiness</h3>
-                    <p class="info">30mg</p>
-                    <p class="price">R44</p>
-                </div>
+<div class="product-card cannabis">
+<img src="assets/images/29.jpg">
+<h3>Mendlinn</h3>
+<p class="info">Hybrid</p>
+<p class="price">R80</p>
+</div>
+
+<!-- Drink -->
+<div class="product-card drink">
+<img src="assets/images/Sodaze Drink.jfif">
+<h3>Sodaze Drink</h3>
+<p class="info">30mg</p>
+<p class="price">R60</p>
+</div>
+
+<div class="product-card drink">
+<img src="assets/images/31.jpg">
+<h3>Lucky Club Juice</h3>
+<p class="info">30mg</p>
+<p class="price">R70</p>
+</div>
+
+<!-- Slider Product -->
+<div class="product-card drink">
+
+<div class="product-slider">
+<div class="slides">
+<img src="assets/images/purple.jpeg">
+<img src="assets/images/red.jpeg">
+</div>
+</div>
+
+<h3>Sodaze CBD Juice</h3>
+<p class="info">20 mg</p>
+<p class="price">R89</p>
+
+</div>
+
 
                 <!-- Drinks -->
                 <div class="product-card drink">
@@ -749,18 +689,29 @@
 
 </div>
 
-                
 
-                <!-- Gummies -->
-                <div class="product-card gummies">
-                    <img src="assets/images/Glorious Joubs Sativa.jfif" alt="">
-                  
-                    <h3>Glorious Joubs Sativa and Indica</h3>
-                    <p class="info">100mg</p>
-                    <p class="price">R84</p>
-                </div>
+<!-- Gummies -->
+<div class="product-card gummies">
 
-                <!-- Other / Accessories -->
+<img src="assets/images/luckyclubgummies.jpg">
+<h3>Lucky Club Gummies</h3>
+
+<button class="potency-btn">View Strength Options</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R200</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R220</span>
+</div>
+</div>
+
+</div>
+
+<!-- Other / Accessories -->
                 <div class="product-card other">
                     <img src="assets/images/shoe grinder.jpeg" alt="Gold Shoe Grinder">
                   
@@ -771,11 +722,11 @@
 
                 <!-- Edibles -->
                 <div class="product-card edible">
-                    <img src="assets/images/sodaze lollipops.jfif" alt="Sodaze Lollipops">
+                    <img src="assets/images/lolii.jfif" alt="Sodaze Lollipops">
                    
                     <h3>Sodaze Lollipops</h3>
-                    <p class="info">100mg</p>
-                    <p class="price">R89</p>
+                    <p class="info">50 mg</p>
+                    <p class="price">R70</p>
                 </div>
 
                 <div class="product-card other">
@@ -818,36 +769,39 @@
         </div>
     </div>
 
-    <h3>Bubble Gum Lollipops</h3>
+    <h3>Ding edible Lollipops</h3>
     <p class="info"></p>
     <p class="price">R89</p>
 
 </div>
 
 
+<div class="product-card gummies">
 
+<img src="assets/images/sour rings.jfif">
+<h3>Sour Rings</h3>
 
-              <div class="product-card other">
-                <div class="product-slider">
-        <div class="slides">
-            <img src="assets/images/sodaze gummie1.jpeg" alt="">
-            <img src="assets/images/sodaze gummie2.jpeg" alt="">
-             <img src="assets/images/sodaze gummies.jfif" alt="">
-             <img src="assets/images/gums.jfif" alt="">
-        </div>
-    </div>
+<button class="potency-btn">View Strength Options</button>
 
-    <h3>Sodaze Gummies</h3>
-    <p class="info">100 mg</p>
-    <p class="price">R89</p>
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R200</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R220</span>
+</div>
+</div>
 
 </div>
 
-                <!-- Other -->
+
+   <!-- Other -->
                 <div class="product-card other">
                     <img src="assets/images/honey.jpg" alt="Honey">
                   
-                    <h3>Honey</h3>
+                    <h3>Honey Hemp Wraps</h3>
                     <p class="info">CBD Infused</p>
                     <p class="price">R89</p>
                 </div>
@@ -868,16 +822,91 @@
                   <p class="price">R100</p>
                 </div>
 
-                <!-- Gummies -->
-                <div class="product-card gummies">
-                    <img src="assets/images/luckyclubgummies.jpg" alt="Lucky Club gummies Peach">
-                   
-                    <h3>Lucky Club Gummies Peach</h3>
-                    <p class="info">100mg</p>
-                    <p class="price">R89</p>
-                </div>
+<div class="product-card gummies">
 
-                <!-- Other -->
+<img src="assets/images/Ding Edibles Sour Worms.jfif">
+<h3>Ding edibles Sour Worms</h3>
+
+<button class="potency-btn">View Strength Options</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R200</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R220</span>
+</div>
+</div>
+
+</div>
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/Best Friends.jfif">
+<h3>Best Friends</h3>
+
+<button class="potency-btn">View Strength Options</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R200</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R220</span>
+</div>
+</div>
+
+</div>
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/pharma-hemp-complex-q_vnJenyn9s-unsplash.jpg">
+<h3>Gummie Bears</h3>
+
+<button class="potency-btn">View Strength Options</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R200</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R220</span>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/Bottled Happiness.jfif">
+<h3>Bottled Happiness</h3>
+
+<button class="potency-btn">View Strength Options</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R200</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R220</span>
+</div>
+</div>
+
+</div>
+
+<!-- Other -->
                 <div class="product-card other">
                     <img src="assets/images/Chuff.jpg" alt="NASTY">
                    
@@ -912,7 +941,77 @@
                     <p class="price">R89</p>
                 </div>
 
-                <!-- Other -->
+<div class="product-card gummies">
+
+<img src="assets/images/Glorious Joubs Sativa.jfif">
+<h3>Glorious Joubs</h3>
+
+<button class="potency-btn">View Strength Options</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R200</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R220</span>
+</div>
+</div>
+
+</div>
+
+
+<div class="product-card gummies">
+
+<div class="product-slider">
+<div class="slides">
+<img src="assets/images/sodaze gummie1.jpeg">
+<img src="assets/images/sodaze gummie2.jpeg">
+<img src="assets/images/sodaze gummies.jfif">
+<img src="assets/images/gums.jfif">
+</div>
+</div>
+
+<h3>Sodaze Gummies</h3>
+
+<button class="potency-btn">View Strength Options</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R200</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R220</span>
+</div>
+</div>
+
+</div>
+
+<div class="product-card gummies">
+
+<img src="assets/images/luckyclubgummies.jpg">
+<h3>Lucky Club Gummies</h3>
+
+<button class="potency-btn">View Strength Options</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>15mg</span>
+<span>R200</span>
+</div>
+<div class="potency-row">
+<span>20mg</span>
+<span>R220</span>
+</div>
+</div>
+
+</div>
+
+
+ <!-- Other -->
                 <div class="product-card other">
                     <img src="assets/images/grend.jpeg" alt="Grinder">
                    
@@ -936,355 +1035,235 @@
                   <p class="info"></p>
                   <p class="price">R80</p>
                 </div>
-            </div>
-        </div>
-    </section>
+
+
+                <div class="product-card edible">
+                  <img src="assets/images/choc chip cookies.jfif" alt="">
+                  <h3>Choc Chip Cookies</h3>
+                  <p class="info"></p>
+                  <p class="price">R80</p>
+                </div>
+
+                <div class="product-card edible">
+                  <img src="assets/images/Ding Fudges.jfif" alt="">
+                  <h3>Ding Fudges</h3>
+                  <p class="info"></p>
+                  <p class="price">R80</p>
+                </div>
+
+</div>
+</div>
+</section>
 
 <style>
 
-/* ============================= */
-/* PRODUCTS SECTION */
-/* ============================= */
-
 .products-section{
-    padding:80px 6%;
-    background:#f8f8f8;
-    text-align:center;
+padding:80px 6%;
+background:#f8f8f8;
+text-align:center;
 }
-
-/* TITLE */
 
 .section-title{
-    font-size:2.6rem;
-    font-weight:700;
-    margin-bottom:40px;
-    color:#00bd00;
+font-size:2.6rem;
+margin-bottom:40px;
+color:#00bd00;
 }
-
-
-/* ============================= */
-/* FILTER BUTTONS */
-/* ============================= */
-
-.filter-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-bottom:40px;
-}
-
-/* BUTTON STYLE */
-
-.filter-buttons button{
-    padding:10px 22px;
-    border:none;
-    background:#00bd00;
-    color:#fff;
-    font-weight:600;
-    border-radius:30px;
-    cursor:pointer;
-    transition:0.3s;
-    font-size:15px;
-    white-space:nowrap;
-}
-
-/* HOVER */
-
-.filter-buttons button:hover{
-    background:#009c00;
-    transform:translateY(-2px);
-}
-
-/* ACTIVE BUTTON */
-
-.filter-buttons button.active{
-    background:#222;
-    color:#fff;
-}
-
-
-/* ============================= */
-/* PRODUCT GRID */
-/* ============================= */
 
 .products-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:28px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:28px;
 }
 
-
-/* ============================= */
-/* PRODUCT CARD */
-/* ============================= */
-
 .product-card{
-    background:#ffffff;
-    border-radius:10px;
-    overflow:hidden;
-    transition:0.3s;
-    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+background:#fff;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+transition:.3s;
 }
 
 .product-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 14px 30px rgba(0,0,0,0.18);
+transform:translateY(-6px);
+box-shadow:0 14px 30px rgba(0,0,0,0.18);
 }
-
-/* IMAGE */
 
 .product-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+width:100%;
+height:220px;
+object-fit:cover;
 }
 
-/* TEXT */
-
-.product-card h3{
-    margin-top:15px;
-    font-size:1.15rem;
-    color:#222;
+/* Product Titles */
+.product-card h3 {
+    font-size: 1.2rem;       /* Title size */
+    font-weight: 600;         /* Slightly bold */
+    margin: 15px 10px 5px;    /* Top, horizontal, bottom spacing */
+    color: #222;              /* Dark gray for contrast */
+    text-align: center;       /* Centered in the card */
+    line-height: 1.3;         /* Makes multi-line titles readable */
 }
 
-.product-card p{
-    margin:6px 0;
+/* Product Info (e.g., THC, mg, type) */
+.product-card .info {
+    font-size: 0.9rem;        /* Slightly smaller than title */
+    color: #777;              /* Medium gray */
+    margin: 0 10px 5px;       /* Horizontal padding + bottom spacing */
+    text-align: center;
 }
 
-.info{
-    font-size:0.9rem;
-    color:#777;
+/* Product Price */
+.product-card .price {
+    font-size: 1rem;          /* Same as title but slightly smaller */
+    font-weight: 700;         /* Bold for emphasis */
+    color: #00bd00;           /* Brand green */
+    margin: 0 10px 15px;      /* Horizontal padding + bottom spacing */
+    text-align: center;
 }
 
-.price{
-    font-size:1.2rem;
-    font-weight:700;
-    color:#00bd00;
-    margin-bottom:15px;
+/* FILTER BUTTONS */
+
+.filter-buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-bottom:40px;
 }
 
+.filter-buttons button{
+padding:10px 22px;
+border:none;
+background:#00bd00;
+color:#fff;
+border-radius:5px;
+cursor:pointer;
+transition:.3s;
+}
 
-/* ============================= */
-/* PRODUCT IMAGE SLIDER */
-/* ============================= */
+.filter-buttons button.active{
+background:#222;
+}
+
+/* POTENCY BUTTON */
+
+.potency-btn{
+background:#00bd00;
+color:#fff;
+border:none;
+padding:8px 16px;
+border-radius:5px;
+cursor:pointer;
+margin:10px 0;
+}
+
+/* POTENCY OPTIONS */
+
+.potency-options{
+max-height:0;
+overflow:hidden;
+transition:.4s;
+background:#f3f3f3;
+border-radius:6px;
+margin:10px;
+}
+
+.potency-row{
+display:flex;
+justify-content:space-between;
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+.product-card.active .potency-options{
+max-height:150px;
+}
+
+/* PRODUCT SLIDER */
 
 .product-slider{
-    overflow:hidden;
-    width:100%;
+width:100%;
+overflow:hidden;
 }
 
 .slides{
-    display:flex;
-    transition:transform 0.5s ease;
+display:flex;
+transition:transform .5s ease;
 }
 
 .slides img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    flex-shrink:0;
+width:100%;
+flex-shrink:0;
+height:220px;
+object-fit:cover;
 }
 
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+    .products-section {
+        padding: 60px 4%;
+    }
 
+    .section-title {
+        font-size: 2.2rem;
+    }
 
-/* TABLETS */
-
-@media screen and (max-width:1024px){
-
-.products-section{
-    padding:60px 5%;
+    .product-card img {
+        height: 200px;
+    }
 }
 
-.products-grid{
-    gap:25px;
+@media (max-width: 768px) {
+    .products-section {
+        padding: 50px 3%;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .product-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .product-card .info,
+    .product-card .price {
+        font-size: 0.85rem;
+    }
 }
 
+@media (max-width: 480px) {
+    .products-section {
+        padding: 40px 2%;
+    }
+
+    .products-grid {
+        gap: 20px;
+    }
+
+    .product-card img {
+        height: 160px;
+    }
+
+    .product-card h3 {
+        font-size: 1rem;
+    }
+
+    .product-card .info,
+    .product-card .price {
+        font-size: 0.8rem;
+    }
+
+    .filter-buttons button {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
 }
-
-
-/* TABLET + MOBILE (SWIPE FILTER BUTTONS) */
-
-@media screen and (max-width:768px){
-
-.products-section{
-    padding:50px 4%;
-}
-
-.section-title{
-    font-size:2.2rem;
-}
-
-.products-grid{
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.product-card img{
-    height:180px;
-}
-
-/* swipeable category bar */
-
-.filter-buttons{
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    justify-content:flex-start;
-    gap:10px;
-    padding-bottom:10px;
-}
-
-/* hide scrollbar */
-
-.filter-buttons::-webkit-scrollbar{
-    display:none;
-}
-
-.filter-buttons button{
-    flex:0 0 auto;
-    padding:8px 18px;
-    font-size:14px;
-}
-
-}
-
-
-/* LARGE PHONES */
-
-@media screen and (max-width:600px){
-
-.products-section{
-    padding:40px 3%;
-}
-
-.section-title{
-    font-size:2rem;
-}
-
-.products-grid{
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
-}
-
-.product-card img{
-    height:160px;
-}
-
-}
-
-
-/* SMALL PHONES */
-
-@media screen and (max-width:480px){
-
-.products-section{
-    padding:30px 3%;
-}
-
-.section-title{
-    font-size:1.8rem;
-}
-
-.products-grid{
-    grid-template-columns:1fr;
-    max-width:320px;
-    margin:0 auto;
-}
-
-.product-card img{
-    height:200px;
-}
-
-.product-card h3{
-    font-size:1rem;
-}
-
-.info{
-    font-size:0.85rem;
-}
-
-.price{
-    font-size:1rem;
-}
-
-}
-
-
-/* VERY SMALL PHONES */
-
-@media screen and (max-width:360px){
-
-.section-title{
-    font-size:1.6rem;
-}
-
-.products-grid{
-    max-width:280px;
-}
-
-.product-card img{
-    height:180px;
-}
-
-}
-
-
-/* LARGE DESKTOP */
-
-@media screen and (min-width:1600px){
-
-.products-section{
-    padding:100px 10%;
-}
-
-.products-grid{
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:35px;
-}
-
-.product-card img{
-    height:240px;
-}
-
-.section-title{
-    font-size:3rem;
-}
-
-}
-
-
-/* 4K SCREENS */
-
-@media screen and (min-width:2000px){
-
-.products-section{
-    padding:120px 12%;
-}
-
-.products-grid{
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:40px;
-}
-
-.product-card img{
-    height:280px;
-}
-
-.section-title{
-    font-size:3.5rem;
-}
-
-.filter-buttons button{
-    padding:12px 24px;
-    font-size:1.2rem;
-}
-
-}
-
 </style>
 
 <style>
@@ -1383,291 +1362,6 @@
 </style>
 
 
-
-<section class="price-cards">
-<div class="container">
-  <h1>Potency Options Available</h1>
-
-    <p>
-      Our <strong>edibles, gummies, and cookies</strong> are available in multiple strength options.
-      Most products come in <strong>15mg</strong> and <strong>20mg</strong> servings.
-      Prices may vary depending on the product.
-    </p>
-  <div class="price-card">
-    <img src="assets/images/Apricot Gummies.jfif" alt="Apricot Gummies">
-
-    <h3>Apricot Gummies</h3>
-
-    <div class="price-row">
-      <span>15mg</span>
-      <span>R84</span>
-    </div>
-
-    <div class="price-row">
-      <span>20mg</span>
-      <span>R100</span>
-    </div>
-
-  </div>
-
-
-  <div class="price-card">
-    <img src="assets/images/sodaze gums.jfif" alt="Sour Gummies">
-
-    <h3>Sodaze Gummies</h3>
-
-    <div class="price-row">
-      <span>15mg</span>
-      <span>R84</span>
-    </div>
-
-    <div class="price-row">
-      <span>20mg</span>
-      <span>R100</span>
-    </div>
-
-  </div>
-
-
-  <div class="price-card">
-    <img src="assets/images/choc chip cookies.jfif" alt="Chocolate Cookies">
-
-    <h3>Chocolate Cookies</h3>
-
-    <div class="price-row">
-      <span>15mg</span>
-      <span>R90</span>
-    </div>
-
-    <div class="price-row">
-      <span>20mg</span>
-      <span>R110</span>
-    </div>
-
-  </div>
-
-  <div class="price-card">
-    <img src="assets/images/Bottled Happiness.jfif" alt="Apricot Gummies">
-
-    <h3>Bottled Happiness Gummies</h3>
-
-    <div class="price-row">
-      <span>15mg</span>
-      <span>R84</span>
-    </div>
-
-    <div class="price-row">
-      <span>20mg</span>
-      <span>R100</span>
-    </div>
-
-  </div>
-
-
-  <div class="price-card">
-    <img src="assets/images/Glorious Joubs Sativa.jfif" alt="Sour Gummies">
-
-    <h3>Sour Gummies</h3>
-
-    <div class="price-row">
-      <span>15mg</span>
-      <span>R84</span>
-    </div>
-
-    <div class="price-row">
-      <span>20mg</span>
-      <span>R100</span>
-    </div>
-
-  </div>
-
-
-  <div class="price-card">
-    <img src="assets/images/Best Friends.jfif" alt="Chocolate Cookies">
-
-    <h3>Best Friends</h3>
-
-    <div class="price-row">
-      <span>15mg</span>
-      <span>R90</span>
-    </div>
-
-    <div class="price-row">
-      <span>20mg</span>
-      <span>R110</span>
-    </div>
-
-  </div>
-</div>
-</section>
-
-<style>
-.price-cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:25px;
-  padding:60px 6%;
-  background: black;
-}
-
-.price-card {
-  background: #111;
-  text-align: center;
-  border-radius: 14px;
-  overflow: hidden;
-  color: #fff;
-
-  transition: transform 0.25s ease;
-
-}
-
-.price-card:hover{
-  transform:translateY(-6px);
-}
-
-.price-cards h1{
-  grid-column:1/-1;
-  font-weight: 600;
-  color:#00bd00;
-  text-align:center;
-  margin-bottom:10px;
-  letter-spacing:1px;
-}
-
-/* Paragraph */
-.price-cards p{
-  grid-column:1/-1;
-  max-width:700px;
-  margin:0 auto 40px auto;
-  text-align:center;
-  color:rgb(255, 255, 255);
-  line-height:1.6;
-  font-size: 16px;
-}
-
-.price-cards .container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.price-card img{
-  display: block;
-  width: 140px;        /* change this to control the size */
-  height: auto;
-  margin: 20px auto;   /* centers the image horizontally */
-  object-fit: contain;
-}
-
-.price-card h3{
-  padding:15px;
-  font-size:1.1rem;
-}
-
-.price-row{
-  display:flex;
-  justify-content:space-between;
-  padding:10px 15px;
-  border-top:1px solid #222;
-  font-size:0.95rem;
-}
-
-.price-row span:last-child{
-  color:#00bd00;
-  font-weight:bold;
-}
-
-
-/* ===================== */
-/* Large screens (Desktop) */
-/* ===================== */
-@media (max-width: 1200px){
-  .price-cards .container{
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
-/* ===================== */
-/* Tablets */
-/* ===================== */
-@media (max-width: 900px){
-
-  .price-cards{
-    padding:50px 5%;
-  }
-
-  .price-cards .container{
-    grid-template-columns: repeat(2, 1fr);
-    gap:20px;
-  }
-
-  .price-card img{
-    width:120px;
-  }
-
-  .price-cards h1{
-    font-size:28px;
-  }
-
-  .price-cards p{
-    font-size:15px;
-    max-width:600px;
-  }
-
-}
-
-
-/* ===================== */
-/* Mobile devices */
-/* ===================== */
-@media (max-width: 600px){
-
-  .price-cards{
-    padding:40px 20px;
-  }
-
-  /* Make the container a single-column grid */
-  .price-cards .container{
-    grid-template-columns: 1fr;
-    gap:20px;
-  }
-
-  /* Make all cards take full width of container */
-  .price-card{
-    width: 100%;
-    margin:0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* optional, ensures content is distributed */
-  }
-
-  /* Keep images consistent */
-  .price-card img{
-    width:110px;
-    height:auto;
-    margin: 20px auto;
-  }
-
-  .price-card h3{
-    font-size:1rem;
-  }
-
-  .price-row{
-    font-size:0.9rem;
-  }
-
-  .price-cards h1{
-    font-size:24px;
-  }
-
-  .price-cards p{
-    font-size:14px;
-    line-height:1.5;
-  }
-
-}
-</style>
 
 
 
@@ -1955,6 +1649,23 @@ document.querySelectorAll('.product-slider').forEach(slider => {
         index = (index + 1) % images.length;
         slides.style.transform = `translateX(-${index * 100}%)`;
     }, 3000);
+
+});
+
+</script>
+
+<script>
+  /* POTENCY DROPDOWN */
+
+document.querySelectorAll(".potency-btn").forEach(button => {
+
+button.addEventListener("click", () => {
+
+const card = button.closest(".product-card");
+
+card.classList.toggle("active");
+
+});
 
 });
 
