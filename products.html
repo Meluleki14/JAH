@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="description" content="Browse our CBD and cannabis gallery showcasing premium flower, extracts, edibles, and indoor cultivation — crafted for quality, purity, and experience.">
+    <meta name="author" content="JAH HERBS">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>JAH HERBS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="icon" type="image/png" sizes="18x18" href="assets/images/icon.png">
+
+
+    <style>
+
+      /* ===== CENTERED SECTION TITLE ===== */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-align: center; /* Center the title */
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+/* Optional: Add an underline effect */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #4a4a4a, #ffffff, #4a4a4a);
+  border-radius: 2px;
+}
+
+
+
+      .featured {
+  padding: 5rem 0;
+  background: #ffffff;
+  color: #ff0022;
+}
+
+
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+/* ================= CATEGORY FILTERS ================= */
+.category-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center; /* Center filters by default */
+}
+
+.filter-btn {
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: #00bd10;
+  border: 1.5px solid #2a2a2a;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap; /* Prevent text wrapping inside buttons */
+}
+
+.filter-btn:hover {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #00bd10;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ================= CATEGORY GRID ================= */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.category-grid.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.category-card {
+  background: #ffffff;
+  border-radius: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(255, 255, 255, 0.5);
+  border-color: #404040;
+}
+
+.category-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card h3 {
+  padding: 1rem 1rem 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00bd10;
+  margin: 0;
+  text-align: center;
+}
+
+.category-card h4 {
+  padding: 0 1rem 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #00bd10;
+  margin: 0;
+  text-align: center;
+  background: #ffffff;
+  border-top: 1px solid #2a2a2a;
+}
+
+/* ================= NO RESULTS MESSAGE ================= */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #161616;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.no-results p {
+  margin-bottom: 1rem;
+}
+
+.no-results .reset-filters {
+  background: transparent;
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.no-results .reset-filters:hover {
+  background: #ffffff;
+  color: #0f0f0f;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+   .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-title::after {
+    width: 60px;
+    height: 2px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .category-card img {
+    height: 200px;
+  }
+
+   .category-filters {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.8rem;
+    flex: 0 1 auto; /* Allow buttons to shrink */
+  }
+}
+
+
+/* Mobile: 576px and below */
+@media screen and (max-width: 576px) {
+
+   .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .section-title::after {
+    width: 50px;
+  }
+
+  .category-filters {
+    gap: 0.5rem;
+    justify-content: flex-start; /* Align left on mobile */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    padding-bottom: 0.75rem; /* Space for scrollbar */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: thin; /* Thin scrollbar for Firefox */
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Custom scrollbar styling */
+  .category-filters::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .category-filters::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+  }
+  
+  .category-filters::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+    border-radius: 10px;
+  }
+  
+  .category-filters::-webkit-scrollbar-thumb:hover {
+    background: #5a5a5a;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    flex: 0 0 auto; /* Prevent buttons from shrinking */
+    white-space: nowrap;
+  }
+}
+
+/* Small Mobile: 375px and below */
+@media screen and (max-width: 375px) {
+   .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .section-title::after {
+    width: 40px;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.7rem;
+    border-width: 1px;
+  }
+}
+
+/* Optional: If you want horizontal scroll on larger screens too */
+@media screen and (max-width: 480px) {
+  .category-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Hide scrollbar by default, show on hover/scroll */
+  .category-filters {
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .category-filters::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .category-filters:hover::-webkit-scrollbar,
+  .category-filters:active::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+  }
+}
+
+/* Alternative: Dropdown style for very small screens */
+@media screen and (max-width: 350px) {
+  .category-filters {
+    display: none; /* Hide buttons */
+  }
+  
+  /* Add a select dropdown alternative */
+  .category-filters-select {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #161616;
+    color: #ffffff;
+    border: 1.5px solid #2a2a2a;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+  
+  .category-filters-select option {
+    background: #161616;
+    color: #ffffff;
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <div class="sub-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-xs-12">
+            <ul class="left-info">
+              <li><a href="#"><i class="fa fa-clock-o"></i>Mon - Sun   10:00 am - 22:00 pm</a></li>
+              <li><a href="#"><i class="fa fa-phone"></i>071 749 0903</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="right-icons">
+               <li><a href="https://www.facebook.com/profile.php?id=61584622234103" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/jahherbs1/"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/+27746311700?text=I%20want%20to%20place%20an%20order"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>JAH HERBS</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home
+             
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="products.html">Products</a>
+              </li>                          
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+ <section class="main-wrapper">
+    <!-- Slide 1 - Flower -->
+    <div class="panel live">
+      <div class="backdrop">
+        <img src="assets/images/elsa-olofsson-luexAOJELhI-unsplash.jpg" alt="OG Kush">
+        <div class="dimmer"></div>
+      </div>
+      <div class="info-box">
+        <span class="stamp">🔥 Just dropped</span>
+        <h1 class="main-title">OG Kush<br><span class="soft">Premium Flower</span></h1>
+        <p class="desc">24% THC • Indoor • Hand-trimmed</p>
+        <div class="amount">R45</div>
+
+      </div>
+      
+    </div>
+
+    <!-- Slide 2 - Edibles -->
+    <div class="panel">
+      <div class="backdrop">
+        <img src="assets/images/top-view-copy-space-multi-colored-marmalades-different-forms-jam-outlets-dark-green-background.jpg" alt="Sodaze Gummies">
+        <div class="dimmer"></div>
+      </div>
+      <div class="info-box">
+        <span class="stamp">🍬 Best seller</span>
+        <h2 class="secondary-title">Sodaze<br><span class="soft">Sour Gummies</span></h2>
+        <p class="desc">100mg THC • Vegan • Assorted flavors</p>
+        <div class="amount">R125</div>
+   
+      </div>
+
+    </div>
+
+    <!-- Slide 3 - Drinks -->
+    <div class="panel">
+      <div class="backdrop">
+        <img src="assets/images/craft.jpg" alt="Sodaze Drink">
+        <div class="dimmer"></div>
+      </div>
+      <div class="info-box">
+        <span class="stamp">🥤 New</span>
+        <h2 class="secondary-title">Sodaze<br><span class="soft">Sparkling Drink</span></h2>
+        <p class="desc">10mg THC • Zero sugar • Citrus</p>
+        <div class="amount">R60</div>
+    
+      </div>
+     
+    </div>
+
+    <!-- Slide 4 - Rizzlers -->
+    <div class="panel">
+      <div class="backdrop">
+        <img src="assets/images/mix-different-chocolate-bars.jpg" alt="OHIS Wraps">
+        <div class="dimmer"></div>
+      </div>
+      <div class="info-box">
+        <span class="stamp">🌿 Organic</span>
+        <h2 class="secondary-title">DING<br><span class="soft">Fudge</span></h2>
+        <p class="desc">Traditional creamy fudge infused with the purest medical grade full spectrum cannabis distillate</p>
+        <div class="amount">R88</div>
+     
+      </div>
+
+    </div>
+
+    
+    <!-- Dots -->
+    <div class="bullets">
+      <button class="bullet active"></button>
+      <button class="bullet"></button>
+      <button class="bullet"></button>
+      <button class="bullet"></button>
+    </div>
+  </section>
+
+
+
+  
+
+<section class="products-section">
+
+<div class="container">
+
+<h2 class="section-title">Our Products</h2>
+
+<div class="filter-buttons"> 
+<button onclick="filterProducts('all',this)" class="active">All</button> 
+<button onclick="filterProducts('cannabis',this)">Cannabis</button>
+<button onclick="filterProducts('edible',this)">Edibles</button>
+<button onclick="filterProducts('gummies',this)">Gummies</button> 
+<button onclick="filterProducts('drink',this)">Drinks</button>
+<button onclick="filterProducts('other',this)">Other</button> 
+</div>
+
+<div class="products-grid" id="products-grid">
+
+
+<!-- Edibles -->
+<div class="product-card edible">
+  <div class="product-slider">
+    <div class="slides">
+      <img src="assets/images/sodaze fudges.jfif">
+      <img src="assets/images/ff.jpeg">
+   </div>
+  </div>
+  
+  <h3>Sodaze Fudges</h3>
+  <p class="info">50 mg</p>
+  <p class="price">R80</p>
+
+</div>
+
+
+
+<!-- Gummies -->
+<div class="product-card gummies">
+  <img src="assets/images/Apricot Gummies.jfif">
+  <h3>Apricot Gummies</h3>
+  <p class="info">100 mg</p>
+  <p class="price">R84</p>
+
+  </div>
+
+
+
+<!-- Cannabis -->
+<div class="product-card cannabis">
+    <img src="assets/images/28.jpg">
+    <h3>OG Kush</h3>
+    <p class="info">Indoor Hybrid</p>
+    <p class="price">R80</p>
+</div>
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/hearts.jfif">
+<h3>Love Hearts</h3>
+<p class="info">200 mg</p>
+<p class="price">R148</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>40 mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/joub.jfif">
+<h3>Joub Joubs</h3>
+<p class="info">200 mg</p>
+<p class="price">R148</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>40 mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/greengo.jfif" alt="Greengo Rizzlers">
+                  
+                    <h3>Greengo Rizzlers</h3>
+                    <p class="info"> Sativa</p>
+                    <p class="price">R10</p>
+                </div>
+
+                <!-- Drinks -->
+                <div class="product-card drink">
+                    <img src="assets/images/Sodaze Drink.jfif" alt="Sodaze Drink">
+                
+                    <h3>Sodaze Drink</h3>
+                    <p class="info">30mg</p>
+                    <p class="price">R60</p>
+                </div>
+
+<div class="product-card gummies">
+<img src="assets/images/fruit.jfif">
+<h3>Fruit Slices</h3>
+<p class="info">Sativa 100 mg</p>
+<p class="price">R84</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>40 mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/jellygummies.jpeg">
+<h3>Jelly Gummies</h3>
+<p class="info">Sativa 200 mg</p>
+<p class="price">R178</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>30 mg</span>
+<span>R35</span>
+</div>
+</div>
+
+</div>
+
+<div class="product-card drink">
+                    <img src="assets/images/soda.jpeg">
+                
+                    <h3>HIDR8 Cream Soda</h3>
+                    <p class="info">330 ml</p>
+                    <p class="price">R80</p>
+                </div>
+
+<div class="product-card cannabis">
+<img src="assets/images/29.jpg">
+<h3>Mendlinn</h3>
+<p class="info">Hybrid</p>
+<p class="price">R80</p>
+</div>
+
+<div class="product-card gummies">
+
+<img src="assets/images/ribbon.jfif">
+<h3>Rainbow Ribbons</h3>
+<p class="info">100 mg</p>
+<p class="price">R100</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>80 mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+
+<!-- Drink -->
+<div class="product-card drink">
+<img src="assets/images/Sodaze Drink.jfif">
+<h3>Sodaze Drink</h3>
+<p class="info">30mg</p>
+<p class="price">R60</p>
+</div>
+
+
+
+
+
+<!-- Slider Product -->
+<div class="product-card drink">
+
+<div class="product-slider">
+<div class="slides">
+<img src="assets/images/purple.jpeg">
+<img src="assets/images/red.jpeg">
+</div>
+</div>
+
+<h3>Sodaze CBD Juice</h3>
+<p class="info">20 mg</p>
+<p class="price">R50</p>
+
+</div>
+
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/scary.jpeg">
+<h3>Scary Eyes</h3>
+<p class="info">Indica 200 mg</p>
+<p class="price">R100</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>80 mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+
+                <!-- Drinks -->
+                <div class="product-card drink">
+                    <img src="assets/images/blueberry.jpeg" alt="Lucky Club Blueberry Vanilla">
+                  
+                    <h3>Lucky Club Blueberry Vanilla</h3>
+                    <p class="info">Juice 30mg</p>
+                    <p class="price">R60</p>
+                </div>
+
+<div class="product-card gummies">
+
+<img src="assets/images/wine.jpeg">
+<h3>Wine Gums</h3>
+<p class="info">Sativa 100 mg</p>
+<p class="price">R84</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>CBD</span>
+<span>R74</span>
+</div>
+</div>
+
+</div>
+              
+
+
+                <div class="product-card drink">
+                  <div class="product-slider">
+                    <div class="slides">
+                    <img src="assets/images/mango.jpeg" alt="">
+                    <img src="assets/images/apricot.jpeg" alt="">
+                   </div>
+                 </div>
+
+             <h3>Lucky club juice</h3>
+           <p class="info">20 mg</p>
+    <p class="price">R60</p>
+
+</div>
+
+
+
+
+<div class="product-card gummies">
+
+<div class="product-slider">
+<div class="slides">
+<img src="assets/images/lcg.jpeg" >
+            <img src="assets/images/luckyclubgummies.jpg">
+</div>
+</div>
+
+<h3>Lucky Club Gummies</h3>
+<p class="info">200 mg</p>
+<p class="price">R200</p>
+
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>40 mg</span>
+<span>R40</span>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+<!-- Other / Accessories -->
+                <div class="product-card other">
+                    <img src="assets/images/shoe grinder.jpeg" alt="Gold Shoe Grinder">
+                  
+                    <h3>Gold Shoe Grinder</h3>
+                    <p class="info">Grinder</p>
+                    <p class="price">R140</p>
+                </div>
+
+                <!-- Edibles -->
+                <div class="product-card edible">
+                    <img src="assets/images/lolii.jfif" alt="Sodaze Lollipops">
+                   
+                    <h3>Sodaze Lollipops</h3>
+                    <p class="info">50 mg</p>
+                    <p class="price">R70</p>
+                </div>
+
+
+                <div class="product-card gummies">
+
+<img src="assets/images/vs.jpeg">
+<h3>Very Sour</h3>
+<p class="info">Sativa 200 mg</p>
+<p class="price">R100</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>80 mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+                <div class="product-card other">
+                  <img src="assets/images/jjoint.jpeg" alt="">
+                  <h3>Tunnel Kief Joints</h3>
+                  <p class="info">Cannabis</p>
+                  <p class="price">R70</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/OCB.jfif" alt="OCB Organic Hemp Wraps">
+                    
+                    <h3>OCB Organic Hemp Wraps</h3>
+                    <p class="info">Hemp Wraps</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <div class="product-card other">
+                <div class="product-slider">
+        <div class="slides">
+            <img src="assets/images/ohis.jpeg" alt="OHIS Hemp Wraps">
+            <img src="assets/images/wrap.jpeg" alt="OHIS Hemp Wraps">
+        </div>
+    </div>
+
+    <h3>OHIS Hemp Wraps</h3>
+    <p class="info">Hemp Wraps</p>
+    <p class="price">R89</p>
+
+</div>
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/comic.jpeg">
+<h3>Cosmic Delights</h3>
+<p class="info">100 mg</p>
+<p class="price">R80</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>40 mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+
+               <div class="product-card other">
+                <div class="product-slider">
+        <div class="slides">
+            <img src="assets/images/lol.jpeg" alt="OHIS Hemp Wraps">
+            <img src="assets/images/lol1.jpeg" alt="OHIS Hemp Wraps">
+             <img src="assets/images/lol2.jpeg" alt="OHIS Hemp Wraps">
+        </div>
+    </div>
+
+    <h3>Ding edible Lollipops</h3>
+    <p class="info">Sweets</p>
+    <p class="price">R89</p>
+
+</div>
+
+
+<div class="product-card edible">
+
+<img src="assets/images/mint.jpeg">
+<h3>Mint Roller</h3>
+<p class="info"> 200 mg</p>
+<p class="price">R122</p>
+
+</div>
+
+
+
+
+<div class="product-card other">
+<div class="product-slider">
+  <div class="slides">
+    <img src="assets/images/tea.jpeg">
+    <img src="assets/images/tea1.jpeg">
+    <img src="assets/images/tea2.jpeg">
+  </div>
+  </div>
+  <h3>One Tea Bag</h3>
+  <p class="info">CBD Fusion</p>
+  <p class="price">R25 </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/sour rings.jfif">
+<h3>Sour Rings</h3>
+
+<p class="info">100 mg</p>
+<p class="price">R74</p>
+
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>20 mg</span>
+<span>R25</span>
+</div>
+
+</div>
+
+</div>
+
+
+   <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/honey.jpg" alt="Honey">
+                  
+                    <h3>Honey Hemp Wraps</h3>
+                    <p class="info">CBD Infused</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/hoo.jpg" alt="Moti Tube Citric Berries">
+                    
+                    <h3>Moti Tube Citric Berries</h3>
+                    <p class="info">Vape</p>
+                    <p class="price">R89</p>
+                </div>
+
+
+
+                <div class="product-card gummies">
+
+<img src="assets/images/munchie.jpeg">
+<h3>Munchie Monsters</h3>
+<p class="info">40 mg</p>
+<p class="price">R70</p>
+
+
+</div>
+
+
+                <div class="product-card other">
+                  <img src="assets/images/jointtt.jpeg" alt="">
+                  <h3>InDoor Kief Joints </h3>
+                  <p class="info">Cannabis</p>
+                  <p class="price">R100</p>
+                </div>
+
+<div class="product-card gummies">
+
+<img src="assets/images/Ding Edibles Sour Worms.jfif">
+<h3>Ding edibles Sour Worms Sativa</h3>
+<p class="info">200 mg</p>
+<p class="price">R148</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>20mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/Best Friends.jfif">
+<h3>Best Friends</h3>
+<p class="info">Indica / Sativa 100mg</p>
+<p class="price">R84</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+<div class="potency-row">
+<span>20mg</span>
+<span>R20</span>
+</div>
+</div>
+
+</div>
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/pharma-hemp-complex-q_vnJenyn9s-unsplash.jpg">
+<h3>Gummie Bears CBD</h3>
+<p class="info">100 mg</p>
+<p class="price">R74</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>20mg</span>
+<span>R25</span>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="product-card gummies">
+
+<img src="assets/images/Bottled Happiness.jfif">
+<h3>Bottled Happiness</h3>
+<p class="info">Sativa 200 mg</p>
+<p class="price">R148</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>20mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+<!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/Chuff.jpg" alt="NASTY">
+                   
+                    <h3>NASTY</h3>
+                    <p class="info">Vape</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <div class="product-card drink">
+                    <img src="assets/images/sodaze cola.jpeg" alt="">
+                   
+                    <h3>Sodaze Bob's Cola</h3>
+                    <p class="info">300 ml</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/grind.jpeg" alt="Silver Grinder">
+                    
+                    <h3>Silver Grinder</h3>
+                    <p class="info">Grinder</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/joint.jpg" alt="Pre rolled joint and Tube">
+                    
+                    <h3>Pre rolled joint and Tube</h3>
+                    <p class="info">Pre-roll</p>
+                    <p class="price">R89</p>
+                </div>
+
+<div class="product-card gummies">
+
+<img src="assets/images/Glorious Joubs Sativa.jfif">
+<h3>Glorious Joubs</h3>
+<p class="info">100 mg</p>
+<p class="price">R84</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>20mg</span>
+<span>R40</span>
+</div>
+</div>
+
+</div>
+
+
+<div class="product-card gummies">
+
+<div class="product-slider">
+<div class="slides">
+<img src="assets/images/sodaze gummie1.jpeg">
+<img src="assets/images/sodaze gummie2.jpeg">
+<img src="assets/images/sodaze gummies.jfif">
+<img src="assets/images/gums.jfif">
+</div>
+</div>
+
+<h3>Sodaze Gummies</h3>
+<p class="info">100 mg</p>
+<p class="price">R80</p>
+<button class="potency-btn">View Option</button>
+
+<div class="potency-options">
+
+<div class="potency-row">
+<span>30 mg</span>
+<span>R30</span>
+</div>
+
+<div class="potency-row">
+<span>100 mg</span>
+<span>R115</span>
+</div>
+
+<div class="potency-row">
+<span>200 mg</span>
+<span>R230</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+ <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/grend.jpeg" alt="Grinder">
+                   
+                    <h3>Grinder</h3>
+                    <p class="info">Grinder</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <!-- Other -->
+                <div class="product-card other">
+                    <img src="assets/images/oil.jpeg" alt="Sleep Therapy CBD Oil">
+                    
+                    <h3>Sleep Therapy CBD Oil</h3>
+                    <p class="info">CBD Oil</p>
+                    <p class="price">R89</p>
+                </div>
+
+                <div class="product-card other">
+                  <img src="assets/images/joint.jpeg" alt="">
+                  <h3>Indoor Hybrid Joints</h3>
+                  <p class="info">Cannabis</p>
+                  <p class="price">R80</p>
+                </div>
+
+
+                <div class="product-card edible">
+                  <img src="assets/images/choc chip cookies.jfif" alt="">
+                  <h3>Choc Chip Cookies</h3>
+                  <p class="info">Edibles</p>
+                  <p class="price">R80</p>
+                </div>
+
+                <div class="product-card edible">
+                  <img src="assets/images/Ding Fudges.jfif" alt="">
+                  <h3>Ding Fudges</h3>
+                  <p class="info">Edibles</p>
+                  <p class="price">R80</p>
+                </div>
+
+</div>
+</div>
+</section>
+
+<style>
+
+  .product-card.no-options h3{
+font-size:1.25rem;
+}
+
+.product-card.no-options .info{
+font-size:1rem;
+}
+
+.product-card.no-options .price{
+font-size:1.15rem;
+}
+
+.products-section{
+padding:100px 6%;
+background:#f7f7f7;
+text-align:center;
+}
+
+.section-title{
+font-size:2.8rem;
+margin-bottom:50px;
+color:#00bd00;
+font-weight:700;
+}
+
+/* FILTER BUTTONS */
+
+.filter-buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
+margin-bottom:60px;
+}
+
+
+
+.filter-buttons button{
+padding:10px 22px;
+border:none;
+border-radius:40px;
+background:#fff;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+
+.filter-buttons button:hover{
+background:#00bd00;
+color:#fff;
+transform:translateY(-2px);
+}
+
+.filter-buttons button.active{
+background:#00bd00;
+color:#fff;
+}
+
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .filter-buttons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .filter-buttons button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .filter-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 10px;
+  }
+
+  .filter-buttons button {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 350px) {
+  .filter-buttons {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+}
+/* GRID */
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:35px;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+background:#fff;
+border-radius:14px;
+overflow:hidden;
+transition:.35s;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+position:relative;
+}
+
+.product-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+
+.product-card img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+transition:transform .4s;
+}
+
+.product-card:hover img{
+transform:scale(1.08);
+}
+
+/* TEXT */
+
+.product-card h3{
+font-size:1.1rem;
+margin:14px 10px 5px;
+font-weight:600;
+color:#222;
+}
+
+.product-card .info{
+font-size:.9rem;
+color:#777;
+margin-bottom:6px;
+}
+
+.product-card .price{
+font-size:1.05rem;
+font-weight:700;
+color:#00bd00;
+margin-bottom:14px;
+}
+
+/* POTENCY BUTTON */
+
+.potency-btn{
+background:#00bd00;
+color:#fff;
+border:none;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+margin-bottom:10px;
+transition:.3s;
+}
+
+.potency-btn:hover{
+background:#009a00;
+}
+
+/* POTENCY OPTIONS */
+
+.potency-options{
+max-height:0;
+overflow:hidden;
+transition:.4s;
+background:#f4f4f4;
+margin:10px;
+border-radius:8px;
+}
+
+.product-card.active .potency-options{
+max-height:180px;
+}
+
+.potency-row{
+display:flex;
+justify-content:space-between;
+padding:10px 14px;
+border-bottom:1px solid #ddd;
+font-size:.9rem;
+}
+
+/* PRODUCT SLIDER */
+
+.product-slider{
+width:100%;
+overflow:hidden;
+aspect-ratio:1/1;
+}
+
+.slides{
+display:flex;
+transition:transform .5s ease;
+}
+
+.slides img{
+width:100%;
+flex-shrink:0;
+object-fit:cover;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1024px){
+
+.products-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:600px){
+
+.products-grid{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
+</style>
+
+<style>
+  /* ================= JAH HERBS FAQ SECTION ================= */
+
+.faq {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+  color: #fff;
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3.5rem;
+  color: #00bd00;
+  letter-spacing: 1px;
+}
+
+/* FAQ Card */
+.faq-item {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #00bd00;
+}
+
+/* Question Button */
+.faq-question {
+  width: 100%;
+  padding: 1.3rem 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Icon */
+.icon {
+  font-size: 1.3rem;
+  color: #00bd00;
+  transition: 0.3s ease;
+}
+
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #111;
+  padding: 0 1.5rem;
+}
+
+.faq-answer p {
+  padding: 1rem 0 1.5rem;
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Active State */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.active .icon {
+  transform: rotate(45deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.7rem;
+  }
+
+  .faq-question {
+    font-size: 0.9rem;
+  }
+}
+</style>
+
+
+
+
+
+
+<section class="faq">
+  <div class="container">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+     <div class="faq-item">
+      <button class="faq-question">
+        What is JAH HERBS? 
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>JAH HERBS is a premium cannabis brand focused on quality, transparency, and responsible use.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Are JAH HERBS products 100% natural?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes. All our herbs are naturally sourced and carefully selected to maintain purity and quality.</p>
+      </div>
+    </div>
+
+  <div class="faq-item">
+  <button class="faq-question">
+    Do you offer nationwide delivery?
+    <span class="icon">+</span>
+  </button>
+  <div class="faq-answer">
+    <p>We are not offering nationwide delivery at the moment. Please contact us directly for local availability and collection options.</p>
+  </div>
+</div>
+
+   
+
+ <div class="faq-item">
+  <button class="faq-question">
+    Are you only based in Johannesburg?
+    <span class="icon">+</span>
+  </button>
+  <div class="faq-answer">
+    <p>Yes, we are currently based in Johannesburg. Reach out to us and we’ll guide you on how to get your herbs safely and conveniently.</p>
+  </div>
+</div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Can I get advice before purchasing?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Absolutely. Contact us for guidance on choosing the right herbal product for your needs.</p>
+      </div>
+    </div>
+
+   <div class="faq-item">
+  <button class="faq-question">
+    How can I place an order?
+    <span class="icon">+</span>
+  </button>
+  <div class="faq-answer">
+    <p>You can place your order by contacting us directly. We will confirm availability and guide you through the process.</p>
+  </div>
+</div>
+  </div>
+</section>
+
+
+
+
+
+  <div class="request-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h4>Seek the help of Zion</h4>
+             <span>Let I-n-I guide you to pure, natural herbs and sacred remedies. Rasta love for all.</span>
+          </div>
+          <div class="col-md-4">
+            <a href="contact.html" class="border-button">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 footer-item">
+            <h4>JAH HERBS</h4>
+            <p>Roots run deep in Zion. I-n-I cultivate sacred herbs the Rastafari way — no chemicals, only natural healing handed down by the elders.</p>
+            <ul class="social-icons">
+              <li><a href="https://www.facebook.com/profile.php?id=61584622234103" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/jahherbs1/"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://wa.me/+27746311700?text=I%20want%20to%20place%20an%20order"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Roots Links</h4>
+            <ul class="menu-list">
+              <li><a href="https://www.instagram.com/p/DVgpl_uCERb">Premium Cannabis</a></li>
+    <li><a href="https://www.instagram.com/p/DVnym7mCBQk/">Natural Remedies</a></li>
+    <li><a href="https://www.instagram.com/p/DVdN5ebiPeg/">New Arrivals</a></li>
+    <li><a href="https://www.facebook.com/photo.php?fbid=122104853289154074&set=pb.61584622234103.-2207520000&type=3">Cartridges</a></li>
+    <li><a href="https://www.instagram.com/p/DSF6a-uiMzR/">Top Strains</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>JAH LINKS</h4>
+            <ul class="menu-list">
+              <li><a href="about.html">Our Story</a></li>
+              <li><a href="contact.html"></a>Get in touch</li>
+              <li><a href="https://www.facebook.com/61569691783988/posts/26114802711507313/?mibextid=rS40aB7S9Ucbxw6v">Customer Support</a></li>
+              <li><a href="https://www.facebook.com/share/r/1DRbQqsoUv/">Contact & Enquiries</a></li>
+              <li><a href="https://www.facebook.com/share/p/1At9LCqBpN/">Our Commitment</a></li>
+            </ul>
+          </div>
+         <div class="col-md-3 footer-item text-center footer-logo-column">
+ 
+  <div class="footer-logo">
+    <img src="assets/images/herbs.png" alt="Jah Herbs Logo">
+  </div>
+
+</div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+
+.footer0-logo {
+  margin-top: 20px;
+}
+
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+  transition: 0.4s ease;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.08);
+}
+
+.logo-caption {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+    </style>
+    
+    
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+
+<script>
+function filterProducts(category) {
+  const products = document.querySelectorAll('.product-card');
+
+  products.forEach(product => {
+    if (category === 'all') {
+      product.style.display = "block";
+    } else {
+      product.classList.contains(category)
+        ? product.style.display = "block"
+        : product.style.display = "none";
+    }
+  });
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const panels = document.querySelectorAll(".panel");
+  const bullets = document.querySelectorAll(".bullet");
+  let currentIndex = 0;
+  let autoSlide;
+
+  function showSlide(index) {
+    // Remove active class from all
+    panels.forEach(panel => panel.classList.remove("live"));
+    bullets.forEach(dot => dot.classList.remove("active"));
+
+    // Add active to current
+    panels[index].classList.add("live");
+    bullets[index].classList.add("active");
+
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    let next = currentIndex + 1;
+    if (next >= panels.length) {
+      next = 0;
+    }
+    showSlide(next);
+  }
+
+  // Dot click navigation
+  bullets.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+      showSlide(index);
+      resetAutoSlide();
+    });
+  });
+
+  // Auto slide (every 5 seconds)
+  function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, 5000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+
+});
+</script>
+
+
+<script>
+  
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+
+</script>
+
+
+<script>
+
+document.querySelectorAll('.product-slider').forEach(slider => {
+
+    const slides = slider.querySelector('.slides');
+    const images = slides.querySelectorAll('img');
+
+    let index = 0;
+
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+
+});
+
+</script>
+
+
+
+<script>
+  document.querySelectorAll(".product-card").forEach(card => {
+
+if(!card.querySelector(".potency-options")){
+card.classList.add("no-options")
+}
+
+})
+</script>
+
+
+
+
+
+<script>
+  /* POTENCY DROPDOWN */
+
+document.querySelectorAll(".potency-btn").forEach(button => {
+
+button.addEventListener("click", () => {
+
+const card = button.closest(".product-card");
+
+card.classList.toggle("active");
+
+});
+
+});
+
+</script>
+ </body>
+</html>
