@@ -5,8 +5,12 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta name="description" content="Browse our CBD and cannabis gallery showcasing premium flower, extracts, edibles, and indoor cultivation — crafted for quality, purity, and experience.">
-    <meta name="author" content="TemplateMo">
+ <meta name="description" content="Contact JAH HERBS in Johannesburg. Call, WhatsApp, or email us for product enquiries, orders, and wellness guidance.">
+    <meta name="author" content="JAH HERBS">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | JAH HERBS">
+    <meta property="og:description" content="Contact JAH HERBS in Johannesburg. Call, WhatsApp, or email us for product enquiries, orders, and wellness guidance.">
+    <meta property="og:site_name" content="JAH HERBS">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <title>Contact Us | JAH HERBS</title>
@@ -68,18 +72,16 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home
-                 
-                </a>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About Us</a>
-              </li>  
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="products.html">Products</a>
-              </li>                          
-              <li class="nav-item">
+              </li>
+              <li class="nav-item active">
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
              
@@ -146,7 +148,7 @@
       <div class="col-md-12">
         <div class="contact-form">
 
-          <form id="contact" action="https://formsubmit.co/jahherbs@gmail.com" method="POST">
+          <form id="contact" action="https://formsubmit.co/jahherbs1@gmail.com" method="POST">
 
             <div class="row">
 
@@ -255,7 +257,7 @@
             <h4>JAH LINKS</h4>
             <ul class="menu-list">
               <li><a href="about.html">Our Story</a></li>
-              <li><a href="contact.html"></a>Get in touch</li>
+              <li><a href="contact.html">Get in touch</a></li>
               <li><a href="https://www.facebook.com/61569691783988/posts/26114802711507313/?mibextid=rS40aB7S9Ucbxw6v">Customer Support</a></li>
               <li><a href="https://www.facebook.com/share/r/1DRbQqsoUv/">Contact & Enquiries</a></li>
               <li><a href="https://www.facebook.com/share/p/1At9LCqBpN/">Our Commitment</a></li>
@@ -272,30 +274,6 @@
       </div>
     </footer>
 
-    <style>
-
-.footer-logo {
-  margin-top: 20px;
-}
-
-.footer-logo img {
-  max-width: 100%;
-  height: auto;
-  transition: 0.4s ease;
-}
-
-.footer-logo img:hover {
-  transform: scale(1.08);
-}
-
-.logo-caption {
-  margin-top: 15px;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-    </style>
-    
     <div class="sub-footer">
       <div class="container">
         <div class="row">
@@ -317,68 +295,5 @@
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/accordions.js"></script>
 
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
-    </script>
-
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const panels = document.querySelectorAll(".panel");
-  const bullets = document.querySelectorAll(".bullet");
-  let currentIndex = 0;
-  let autoSlide;
-
-  function showSlide(index) {
-    // Remove active class from all
-    panels.forEach(panel => panel.classList.remove("live"));
-    bullets.forEach(dot => dot.classList.remove("active"));
-
-    // Add active to current
-    panels[index].classList.add("live");
-    bullets[index].classList.add("active");
-
-    currentIndex = index;
-  }
-
-  function nextSlide() {
-    let next = currentIndex + 1;
-    if (next >= panels.length) {
-      next = 0;
-    }
-    showSlide(next);
-  }
-
-  // Dot click navigation
-  bullets.forEach((dot, index) => {
-    dot.addEventListener("click", function () {
-      showSlide(index);
-      resetAutoSlide();
-    });
-  });
-
-  // Auto slide (every 5 seconds)
-  function startAutoSlide() {
-    autoSlide = setInterval(nextSlide, 5000);
-  }
-
-  function resetAutoSlide() {
-    clearInterval(autoSlide);
-    startAutoSlide();
-  }
-
-  startAutoSlide();
-
-});
-</script>
   </body>
 </html>
